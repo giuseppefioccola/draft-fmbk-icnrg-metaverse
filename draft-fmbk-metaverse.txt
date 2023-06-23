@@ -5,12 +5,12 @@
 Network Working Group                                        G. Fioccola
 Internet-Draft                                       Huawei Technologies
 Intended status: Informational                                 P. Mendes
-Expires: 17 November 2023                                         Airbus
+Expires: 25 December 2023                                         Airbus
                                                                 J. Burke
                                                               UCLA REMAP
                                                              D. Kutscher
                                                                HKUST(GZ)
-                                                             16 May 2023
+                                                            23 June 2023
 
 
              Metaverse impacts on the Internet technologies
@@ -19,8 +19,8 @@ Expires: 17 November 2023                                         Airbus
 Abstract
 
    This document aims to explore the new challenges for the transport
-   network brought by the development of Metaverse.  It will also cover
-   requirements, gap analysis and solutions.
+   network brought by the development of Metaverse.  It discusses the
+   Metaverse as an Information-Centric Network (ICN).
 
 Discussion Venues
 
@@ -44,7 +44,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 17 November 2023.
+   This Internet-Draft will expire on 25 December 2023.
 
 Copyright Notice
 
@@ -65,7 +65,7 @@ Table of Contents
    1.  Introduction
    2.  Requirements
    3.  Gap Analysis
-   4.  Solutions
+   4.  ICN technical challenges
    5.  Security Considerations
    6.  IANA Considerations
    7.  Contributors
@@ -75,36 +75,33 @@ Table of Contents
 
 1.  Introduction
 
+   The Web today essentially represents a data-centric application
+   layer: data named by URLs is manipulated with Representational State
+   Transfer (REST) primitives.  However, the semantic gap with the
+   underlying host-oriented transport is significant.
+
+   The interest in “the Metaverse” suggests that the end-user experience
+   of the Web will evolve towards an always-on eXtended Reality (XR).
    Metaverse introduces the concept of a persistent virtual space of
    everyday life as platform-agnostic digital space.  It is an
    interconnected and limitless virtual world populated by an extension
    of physical identities, a digital twin of the physical world.
+   Metaverse can be seen as the 3D generation of the Internet accessible
+   via new non-intrusive interfaces (e.g. holographics) and making use
+   of new types of information (e.g. haptic, temperature, smell,
+   emotions, digital transactions) that can be exchanged between people,
+   simulated users, and cyber-physical systems, while preserving data
+   privacy.
 
-   Metaverse can be defined as the 3D generation of the Internet
-   accessible via new non-intrusive interfaces (e.g. holographics) and
-   making use of new types of information (e.g. haptic, temperature,
-   smell, emotions, digital transactions) that can be exchanged between
-   people, simulated users, and cyber-physical systems, while preserving
-   data privacy.
+   For this reason, the Metaverse should be considered not as an
+   application of the current network, but an evolution of the network
+   itself, reducing rather than widening the gap between network
+   architecture and application semantics.
 
-   Virtual Reality (VR) and Augmented Reality (AR) technologies have
-   enormous potential in many different fields.  Cloud based AR/VR are
-   evolving since AR/VR applications combine high bandwidth demands and
-   high sensitivity to latency and dropped packets.  There are elaborate
-   solutions for dealing with bandwidth limitations, network congestion,
-   lossy transport protocols, and the ever growing size of video data,
-   for instance:
-
-   *  [MPTCP] and [MPQUIC] are the expansions of [TCP] and [QUIC] in
-      order to dispatch packets over multiple paths to maximize
-      throughput.
-
-   *  Adaptive Streaming approaches based on HTTP/2 aim to improve the
-      viewport quality of immersive videos by refining the tiles
-      delivery.
-
-   But these solutions have limitations when we consider their
-   application to the Metaverse virtual space.
+   The ICN architecture is discussed in this document since it allows to
+   achieve the integration of application and network layers with less
+   overhead, low latency, better security, and more disruption tolerance
+   suitable to diverse uses cases.
 
 2.  Requirements
 
@@ -129,73 +126,93 @@ Table of Contents
 
 3.  Gap Analysis
 
-   Dynamic Adaptive Streaming over HTTP (DASH) is an adaptive bitrate
-   streaming technique that enables high quality streaming of media
-   content over HTTP.  Typically, the DASH client adaptively requests
-   small chunks of media based on the available bandwidth and other
-   resources.  This client-pull technology has proven to be more
-   flexible, firewall-friendly, and CDN scalable than server-push
-   technologies.  However, there is less control given the decentralized
-   and client-driven nature of DASH, which introduces new challenges for
-   them to offer a consistent and possibly higher quality of service for
-   the new Metaverse experience.
+   There are elaborate solutions for dealing with bandwidth limitations,
+   network congestion, lossy transport protocols, and the ever growing
+   size of video data, to address the above requirements, for instance:
 
-   The Metaverse immersive space require intensive computational
-   resources to render and display the video frames in a short motion-
-   to-photon time so that people can obtain a real-time experience.  VR
-   and AR on the Edge Cloud is becoming a promising technique, which
-   enables users to play high quality VR games without equipping high
-   end gaming PCs.
+   *  MPTCP[RFC8684] and MPQUIC[I-D.ietf-quic-multipath] are the
+      expansions of TCP[RFC9293] and QUIC[RFC9000] in order to dispatch
+      packets over multiple paths to maximize throughput.
 
-   With Metaverse, it is expected that a big amount of data can be
-   exchanged between autonomous networks over untrusted channels.  To
-   ensure security, privacy, and trust among stakeholders, Blockchain
-   can be employed to allow intelligent resource management, user access
-   control, audibility, and chronology in stored transactions.
+   *  Dynamic Adaptive Streaming over HTTP (DASH) aim to improve the
+      viewport quality of immersive videos by refining the tiles
+      delivery.  But client-driven nature of DASH introduces less
+      control on the server side.
 
-4.  Solutions
-
-   Some initiatives are already dealing with related issues in IETF:
-
-   *  Network of Information defines an Information-Centric Networking
-      (ICN) with named "information objects", e.g. media contents, as
-      the central concept as opposed to a physical computer, or "node".
-      In ICN approaches, the principal paradigm is not host-to-host
-      communication as in the current Internet architecture ([RFC7927]).
-      The increasing demand for highly scalable and efficient
-      distribution of content has motivated the development of
-      architectures that focus on information objects, their properties,
-      and receiver interest in the network to achieve efficient and
-      reliable distribution of such objects.
-
-   *  QuicR defines a Media Delivery Protocol over QUIC and its
-      architecture [I-D.jennings-moq-quicr-arch] uses similar concepts
-      and delivery mechanisms to those used by CDN and named objects.
-      However there are fundamental characteristics that QuicR provides
-      for ultra low latency delivery, by leveraging the characteristics
-      of QUIC protocol.
-
-   *  Low Latency Low Loss Scalable throughput technology (L4S) can
-      significantly reduce lag in an interactive cloud-based video game
-      ([I-D.ietf-tsvwg-l4s-arch]).  L4S relies on ECN (Explicit
-      Congestion Notification) in the IP header to indicate queue build-
-      up in the radio access network to the application.
+   *  Media over QUIC (MoQ) ([I-D.ietf-moq-requirements]) and extensions
+      such as QuicR ([I-D.jennings-moq-proto]) use similar concepts and
+      delivery mechanisms to those used by CDN and named objects.  There
+      are fundamental characteristics that QuicR provides for ultra low
+      latency delivery, by leveraging the characteristics of QUIC
+      protocol.
 
    *  The APplication-aware Networking (APN) aims to develop a framework
       to enable fine-granularity network service provisioning (traffic
       operations) within the network domain(s) that supports APN
       ([I-D.li-apn-framework]).  APN aims to use the ability to apply
-      policies to traffic flows entering into the infrastructure (APN
-      domain).  In modern networks, where things such as deterministic
-      networking and networking slicing are required, there is a
-      requirement for more functionality than QoS can provide.
+      policies to traffic flows entering into the infrastructure.  In
+      modern networks, where things such as deterministic networking and
+      networking slicing are required, there is a requirement for more
+      functionality than QoS can provide.
 
-   *  Glass to Glass Internet Ecosystem (GGIE) was presented few years
-      ago and aimed to leverage IPv6 Glass to Glass.  End to end
-      Internet digital video ecosystem focusing on all phases of the
-      video life cycle: Capture-Edit-Package-Distribute-Find-Watch.  The
-      network is assumed to be IPv6-only.  More details can be found in
-      [I-D.deen-daigle-ggie].
+   But these solutions have limitations when we consider the Metaverse
+   virtual space.  In all of these approaches, the Metaverse is
+   considered as an overlay application with corresponding
+   infrastructure dependencies, but this increases the current gaps (and
+   resulting costs and technical complexity) between distributed
+   applications and the underlying network architecture.
+
+   It would be better to assume information-centric system where most
+   applications participate in granular 3D content exchange, context-
+   aware integration with the physical world, and other Metaverse-
+   relevant services. “The Metaverse” is an information-centric concept
+   that will become synonymous with the network itself.
+
+   The Information-Centric Networking (ICN) introduces named
+   “information objects”, e.g. media contents, as the central concept as
+   opposed to a physical computer, or "node".  In ICN approaches, the
+   principal paradigm is not host-to-host communication as in the
+   current Internet architecture ([RFC7927]).  The increasing demand for
+   highly scalable and efficient distribution of content has motivated
+   the development of architectures that focus on information objects,
+   their properties, and receiver interest in the network to achieve
+   efficient and reliable distribution of such objects.
+
+4.  ICN technical challenges
+
+   Many applications already work with data-oriented paradigms.  Mapping
+   them to a host-centric network model creates complexities and
+   robustness issues, which can be addressed with a native ICN approach.
+
+   The overlay approach to deal with real-time interactive media adds
+   significant complexity.  It is needed a fine-grained, hierarchical
+   media exchange for low-latency interactive communication that enables
+   scalable multi-destination distribution, and in-network replication
+   and transformation that exposes object hierarchy for fine grained
+   access and security.
+
+   Since the Metaverse is an extension of the Web into immersive XR
+   modalities that are often aligned with physical space, leveraging ICN
+   concepts provides support for decentralized publishing, content
+   interoperability and co-existence, based on general building blocks
+   and not within separated application silos as today’s initial
+   prototypes.
+
+   There are four ICN capabilities critical to Metaverse concepts:
+
+   *  scalable and robust multi-destination communication, overcoming IP
+      multicast challenges such as inter-domain routing, scalability,
+      and routing communication overhead;
+
+   *  leveraging wireless broadcast to support shared local views and
+      low-latency interactivity;
+
+   *  privacy, selective attention, content filtering, and autonomous
+      interactions, as well as ownership and control on the publishing
+      side;
+
+   *  supporting in-network processing for objects replication and
+      transformation.
 
 5.  Security Considerations
 
@@ -215,13 +232,6 @@ Table of Contents
 
 9.  Informative References
 
-   [I-D.deen-daigle-ggie]
-              Deen, G. and L. Daigle, "Glass to Glass Internet Ecosystem
-              Introduction", Work in Progress, Internet-Draft, draft-
-              deen-daigle-ggie-02, 24 October 2016,
-              <https://datatracker.ietf.org/doc/html/draft-deen-daigle-
-              ggie-02>.
-
    [I-D.han-iccrg-arvr-transport-problem]
               Han, L. and K. Smith, "Problem Statement: Transport
               Support for Augmented and Virtual Reality Applications",
@@ -230,20 +240,27 @@ Table of Contents
               <https://datatracker.ietf.org/doc/html/draft-han-iccrg-
               arvr-transport-problem-01>.
 
-   [I-D.ietf-tsvwg-l4s-arch]
-              Briscoe, B., De Schepper, K., Bagnulo, M., and G. White,
-              "Low Latency, Low Loss, and Scalable Throughput (L4S)
-              Internet Service: Architecture", Work in Progress,
-              Internet-Draft, draft-ietf-tsvwg-l4s-arch-20, 29 August
-              2022, <https://datatracker.ietf.org/doc/html/draft-ietf-
-              tsvwg-l4s-arch-20>.
+   [I-D.ietf-moq-requirements]
+              Gruessing, J. and S. Dawkins, "Media Over QUIC - Use Cases
+              and Requirements for Media Transport Protocol Design",
+              Work in Progress, Internet-Draft, draft-ietf-moq-
+              requirements-00, 5 June 2023,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-moq-
+              requirements-00>.
 
-   [I-D.jennings-moq-quicr-arch]
+   [I-D.ietf-quic-multipath]
+              Liu, Y., Ma, Y., De Coninck, Q., Bonaventure, O., Huitema,
+              C., and M. Kühlewind, "Multipath Extension for QUIC", Work
+              in Progress, Internet-Draft, draft-ietf-quic-multipath-04,
+              13 March 2023, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-quic-multipath-04>.
+
+   [I-D.jennings-moq-proto]
               Jennings, C. F. and S. Nandakumar, "QuicR - Media Delivery
               Protocol over QUIC", Work in Progress, Internet-Draft,
-              draft-jennings-moq-quicr-arch-01, 11 July 2022,
+              draft-jennings-moq-proto-00, 13 March 2023,
               <https://datatracker.ietf.org/doc/html/draft-jennings-moq-
-              quicr-arch-01>.
+              proto-00>.
 
    [I-D.li-apn-framework]
               Li, Z., Peng, S., Voyer, D., Li, C., Liu, P., Cao, C., and
@@ -253,29 +270,23 @@ Table of Contents
               <https://datatracker.ietf.org/doc/html/draft-li-apn-
               framework-07>.
 
-   [MPQUIC]   Liu, Y., Ma, Y., De Coninck, Q., Bonaventure, O., Huitema,
-              C., and M. Kühlewind, "Multipath Extension for QUIC", Work
-              in Progress, Internet-Draft, draft-ietf-quic-multipath-04,
-              13 March 2023, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-quic-multipath-04>.
-
-   [MPTCP]    Ford, A., Raiciu, C., Handley, M., Bonaventure, O., and C.
-              Paasch, "TCP Extensions for Multipath Operation with
-              Multiple Addresses", RFC 8684, DOI 10.17487/RFC8684, March
-              2020, <https://www.rfc-editor.org/rfc/rfc8684>.
-
-   [QUIC]     Iyengar, J., Ed. and M. Thomson, Ed., "QUIC: A UDP-Based
-              Multiplexed and Secure Transport", RFC 9000,
-              DOI 10.17487/RFC9000, May 2021,
-              <https://www.rfc-editor.org/rfc/rfc9000>.
-
    [RFC7927]  Kutscher, D., Ed., Eum, S., Pentikousis, K., Psaras, I.,
               Corujo, D., Saucez, D., Schmidt, T., and M. Waehlisch,
               "Information-Centric Networking (ICN) Research
               Challenges", RFC 7927, DOI 10.17487/RFC7927, July 2016,
               <https://www.rfc-editor.org/rfc/rfc7927>.
 
-   [TCP]      Eddy, W., Ed., "Transmission Control Protocol (TCP)",
+   [RFC8684]  Ford, A., Raiciu, C., Handley, M., Bonaventure, O., and C.
+              Paasch, "TCP Extensions for Multipath Operation with
+              Multiple Addresses", RFC 8684, DOI 10.17487/RFC8684, March
+              2020, <https://www.rfc-editor.org/rfc/rfc8684>.
+
+   [RFC9000]  Iyengar, J., Ed. and M. Thomson, Ed., "QUIC: A UDP-Based
+              Multiplexed and Secure Transport", RFC 9000,
+              DOI 10.17487/RFC9000, May 2021,
+              <https://www.rfc-editor.org/rfc/rfc9000>.
+
+   [RFC9293]  Eddy, W., Ed., "Transmission Control Protocol (TCP)",
               STD 7, RFC 9293, DOI 10.17487/RFC9293, August 2022,
               <https://www.rfc-editor.org/rfc/rfc9293>.
 

@@ -12,24 +12,24 @@
 <meta content="
        This document aims to explore the new challenges for the transport network
 brought by the development of Metaverse.
-It will also cover requirements, gap analysis and solutions. 
+It discusses the Metaverse as an Information-Centric Network (ICN). 
     " name="description">
-<meta content="xml2rfc 3.17.1" name="generator">
+<meta content="xml2rfc 3.17.3" name="generator">
 <meta content="Internet-Draft" name="keyword">
 <meta content="draft-fmbk-metaverse-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.17.1
-    Python 3.10.11
+  xml2rfc 3.17.3
+    Python 3.11.4
     appdirs 1.4.4
     ConfigArgParse 1.5.3
-    google-i18n-address 2.5.2
+    google-i18n-address 3.1.0
     intervaltree 3.1.0
     Jinja2 3.1.2
     lxml 4.9.2
     pycountry 22.3.5
     PyYAML 6.0
-    requests 2.28.1
-    setuptools 65.6.0
+    requests 2.31.0
+    setuptools 67.7.2
     six 1.16.0
     wcwidth 0.2.6
 -->
@@ -613,6 +613,7 @@ sub, sup {
   clear: left;
   float: left;
   text-align: right;
+  margin-right: 1ch;
 }
 #identifiers dd {
   margin: 0;
@@ -1051,11 +1052,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">Metaverse</td>
-<td class="right">May 2023</td>
+<td class="right">June 2023</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Fioccola, et al.</td>
-<td class="center">Expires 17 November 2023</td>
+<td class="center">Expires 25 December 2023</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1068,12 +1069,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-fmbk-metaverse-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2023-05-16" class="published">16 May 2023</time>
+<time datetime="2023-06-23" class="published">23 June 2023</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2023-11-17">17 November 2023</time></dd>
+<dd class="expires"><time datetime="2023-12-25">25 December 2023</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1100,7 +1101,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
 <p id="section-abstract-1">This document aims to explore the new challenges for the transport network
 brought by the development of Metaverse.
-It will also cover requirements, gap analysis and solutions.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+It discusses the Metaverse as an Information-Centric Network (ICN).<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
       <h2 id="name-discussion-venues">
@@ -1129,7 +1130,7 @@ It will also cover requirements, gap analysis and solutions.<a href="#section-ab
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 17 November 2023.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 25 December 2023.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1168,7 +1169,7 @@ It will also cover requirements, gap analysis and solutions.<a href="#section-ab
             <p id="section-toc.1-1.3.1" class="keepWithNext"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-gap-analysis" class="internal xref">Gap Analysis</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
-            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-solutions" class="internal xref">Solutions</a></p>
+            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-icn-technical-challenges" class="internal xref">ICN technical challenges</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5">
             <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
@@ -1197,33 +1198,28 @@ It will also cover requirements, gap analysis and solutions.<a href="#section-ab
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
-<p id="section-1-1">Metaverse introduces the concept of a persistent virtual space of everyday life
-as platform-agnostic digital space. It is an interconnected and limitless virtual
-world populated by an extension of physical identities, a digital twin of the
-physical world.<a href="#section-1-1" class="pilcrow">¶</a></p>
-<p id="section-1-2">Metaverse can be defined as the 3D generation of the Internet accessible via
+<p id="section-1-1">The Web today essentially represents a data-centric application layer:
+data named by URLs is manipulated with Representational State Transfer (REST)
+primitives. However, the semantic gap with the underlying host-oriented
+transport is significant.<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-2">The interest in “the Metaverse” suggests that the end-user experience
+of the Web will evolve towards an always-on eXtended Reality (XR).
+Metaverse introduces the concept of a persistent virtual space of
+everyday life as platform-agnostic digital space. It is an interconnected
+and limitless virtual world populated by an extension of physical identities,
+a digital twin of the physical world.
+Metaverse can be seen as the 3D generation of the Internet accessible via
 new non-intrusive interfaces (e.g. holographics) and making use of new types
 of information (e.g. haptic, temperature, smell, emotions, digital transactions)
 that can be exchanged between people, simulated users, and cyber-physical
 systems, while preserving data privacy.<a href="#section-1-2" class="pilcrow">¶</a></p>
-<p id="section-1-3">Virtual Reality (VR) and Augmented Reality (AR) technologies have enormous
-potential in many different fields.
-Cloud based AR/VR are evolving since AR/VR applications combine high bandwidth
-demands and high sensitivity to latency and dropped packets.
-There are elaborate solutions for dealing with bandwidth limitations, network
-congestion, lossy transport protocols, and the ever growing size of video data,
-for instance:<a href="#section-1-3" class="pilcrow">¶</a></p>
-<ul class="normal">
-<li class="normal" id="section-1-4.1">
-          <span>[<a href="#MPTCP" class="cite xref">MPTCP</a>]</span> and <span>[<a href="#MPQUIC" class="cite xref">MPQUIC</a>]</span> are the expansions of <span>[<a href="#TCP" class="cite xref">TCP</a>]</span> and <span>[<a href="#QUIC" class="cite xref">QUIC</a>]</span> in order to
-dispatch packets over multiple paths to maximize throughput.<a href="#section-1-4.1" class="pilcrow">¶</a>
-</li>
-        <li class="normal" id="section-1-4.2">Adaptive Streaming approaches based on HTTP/2 aim to improve the viewport quality
-of immersive videos by refining the tiles delivery.<a href="#section-1-4.2" class="pilcrow">¶</a>
-</li>
-      </ul>
-<p id="section-1-5">But these solutions have limitations when we consider their application to the
-Metaverse virtual space.<a href="#section-1-5" class="pilcrow">¶</a></p>
+<p id="section-1-3">For this reason, the Metaverse should be considered not as an application
+of the current network, but an evolution of the network itself,
+reducing rather than widening the gap between network architecture
+and application semantics.<a href="#section-1-3" class="pilcrow">¶</a></p>
+<p id="section-1-4">The ICN architecture is discussed in this document since it allows to achieve
+the integration of application and network layers with less overhead, low latency,
+better security, and more disruption tolerance suitable to diverse uses cases.<a href="#section-1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="requirements">
@@ -1256,68 +1252,86 @@ encodings<a href="#section-2-2.4" class="pilcrow">¶</a>
       <h2 id="name-gap-analysis">
 <a href="#section-3" class="section-number selfRef">3. </a><a href="#name-gap-analysis" class="section-name selfRef">Gap Analysis</a>
       </h2>
-<p id="section-3-1">Dynamic Adaptive Streaming over HTTP (DASH) is an adaptive bitrate streaming
-technique that enables high quality streaming of media content over HTTP.
-Typically, the DASH client adaptively requests small chunks of media based on
-the available bandwidth and other resources. This client-pull technology has
-proven to be more flexible, firewall-friendly, and CDN scalable than server-push
-technologies. However, there is less control given the decentralized and
-client-driven nature of DASH, which introduces new challenges for them to offer
-a consistent and possibly higher quality of service for the new Metaverse
-experience.<a href="#section-3-1" class="pilcrow">¶</a></p>
-<p id="section-3-2">The Metaverse immersive space require intensive computational resources to render
-and display the video frames in a short motion-to-photon time so that people can
-obtain a real-time experience.
-VR and AR on the Edge Cloud is becoming a promising technique, which enables
-users to play high quality VR games without equipping high end gaming PCs.<a href="#section-3-2" class="pilcrow">¶</a></p>
-<p id="section-3-3">With Metaverse, it is expected that a big amount of data can be exchanged between
-autonomous networks over untrusted channels. To ensure security, privacy, and
-trust among stakeholders, Blockchain can be employed to allow intelligent resource
-management, user access control, audibility, and chronology in stored transactions.<a href="#section-3-3" class="pilcrow">¶</a></p>
-</section>
-</div>
-<div id="solutions">
-<section id="section-4">
-      <h2 id="name-solutions">
-<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-solutions" class="section-name selfRef">Solutions</a>
-      </h2>
-<p id="section-4-1">Some initiatives are already dealing with related issues in IETF:<a href="#section-4-1" class="pilcrow">¶</a></p>
+<p id="section-3-1">There are elaborate solutions for dealing with bandwidth limitations, network congestion,
+lossy transport protocols, and the ever growing size of video data, to address
+the above requirements, for instance:<a href="#section-3-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-4-2.1">Network of Information defines an Information-Centric Networking (ICN) with named
-"information objects", e.g. media contents, as the central concept as opposed to
-a physical computer, or "node".
+<li class="normal" id="section-3-2.1">MPTCP<span>[<a href="#RFC8684" class="cite xref">RFC8684</a>]</span> and MPQUIC<span>[<a href="#I-D.ietf-quic-multipath" class="cite xref">I-D.ietf-quic-multipath</a>]</span> are the expansions of
+TCP<span>[<a href="#RFC9293" class="cite xref">RFC9293</a>]</span> and QUIC<span>[<a href="#RFC9000" class="cite xref">RFC9000</a>]</span> in order to dispatch packets over multiple paths
+to maximize throughput.<a href="#section-3-2.1" class="pilcrow">¶</a>
+</li>
+        <li class="normal" id="section-3-2.2">Dynamic Adaptive Streaming over HTTP (DASH) aim to improve the viewport quality
+of immersive videos by refining the tiles delivery. But client-driven nature of DASH
+introduces less control on the server side.<a href="#section-3-2.2" class="pilcrow">¶</a>
+</li>
+        <li class="normal" id="section-3-2.3">Media over QUIC (MoQ) (<span>[<a href="#I-D.ietf-moq-requirements" class="cite xref">I-D.ietf-moq-requirements</a>]</span>) and extensions such as QuicR
+(<span>[<a href="#I-D.jennings-moq-proto" class="cite xref">I-D.jennings-moq-proto</a>]</span>) use similar concepts and delivery mechanisms to those
+used by CDN and named objects.
+There are fundamental characteristics that QuicR provides for ultra low latency delivery,
+by leveraging the characteristics of QUIC protocol.<a href="#section-3-2.3" class="pilcrow">¶</a>
+</li>
+        <li class="normal" id="section-3-2.4">The APplication-aware Networking (APN) aims to develop a framework to enable
+fine-granularity network service provisioning (traffic operations) within the
+network domain(s) that supports APN (<span>[<a href="#I-D.li-apn-framework" class="cite xref">I-D.li-apn-framework</a>]</span>). APN aims to use
+the ability to apply policies to traffic flows entering into the infrastructure.
+In modern networks, where things such as deterministic networking and networking
+slicing are required, there is a requirement for more functionality than QoS can
+provide.<a href="#section-3-2.4" class="pilcrow">¶</a>
+</li>
+      </ul>
+<p id="section-3-3">But these solutions have limitations when we consider the Metaverse virtual space.
+In all of these approaches, the Metaverse is considered as an overlay application
+with corresponding infrastructure dependencies, but this increases the current gaps
+(and resulting costs and technical complexity) between distributed applications and
+the underlying network architecture.<a href="#section-3-3" class="pilcrow">¶</a></p>
+<p id="section-3-4">It would be better to assume information-centric system where most applications
+participate in granular 3D content exchange, context-aware integration with
+the physical world, and other Metaverse-relevant services.
+“The Metaverse” is an information-centric concept that will become synonymous
+with the network itself.<a href="#section-3-4" class="pilcrow">¶</a></p>
+<p id="section-3-5">The Information-Centric Networking (ICN) introduces named “information objects”,
+e.g. media contents, as the central concept as opposed to a physical computer, or "node".
 In ICN approaches, the principal paradigm is not host-to-host communication as in
 the current Internet architecture (<span>[<a href="#RFC7927" class="cite xref">RFC7927</a>]</span>).
 The increasing demand for highly scalable and efficient distribution of content
 has motivated the development of architectures that focus on information objects,
 their properties, and receiver interest in the network to achieve efficient and
-reliable distribution of such objects.<a href="#section-4-2.1" class="pilcrow">¶</a>
+reliable distribution of such objects.<a href="#section-3-5" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="icn-technical-challenges">
+<section id="section-4">
+      <h2 id="name-icn-technical-challenges">
+<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-icn-technical-challenges" class="section-name selfRef">ICN technical challenges</a>
+      </h2>
+<p id="section-4-1">Many applications already work with data-oriented paradigms.
+Mapping them to a host-centric network model creates complexities
+and robustness issues, which can be addressed with a native ICN approach.<a href="#section-4-1" class="pilcrow">¶</a></p>
+<p id="section-4-2">The overlay approach to deal with real-time interactive media adds significant
+complexity. It is needed a fine-grained, hierarchical media exchange for low-latency
+interactive communication that enables scalable multi-destination distribution,
+and in-network replication and transformation that exposes object hierarchy for
+fine grained access and security.<a href="#section-4-2" class="pilcrow">¶</a></p>
+<p id="section-4-3">Since the Metaverse is an extension of the Web into immersive XR modalities
+that are often aligned with physical space, leveraging ICN concepts provides
+support for decentralized publishing, content interoperability and co-existence,
+based on general building blocks and not within separated application silos as
+today’s initial prototypes.<a href="#section-4-3" class="pilcrow">¶</a></p>
+<p id="section-4-4">There are four ICN capabilities critical to Metaverse concepts:<a href="#section-4-4" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4-5.1">scalable and robust multi-destination communication, overcoming
+IP multicast challenges such as inter-domain routing,
+scalability, and routing communication overhead;<a href="#section-4-5.1" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-4-2.2">QuicR defines a Media Delivery Protocol over QUIC and its architecture
-<span>[<a href="#I-D.jennings-moq-quicr-arch" class="cite xref">I-D.jennings-moq-quicr-arch</a>]</span> uses similar concepts and delivery mechanisms to
-those used by CDN and named objects. However there are fundamental
-characteristics that QuicR provides for ultra low latency delivery, by leveraging
-the characteristics of QUIC protocol.<a href="#section-4-2.2" class="pilcrow">¶</a>
+        <li class="normal" id="section-4-5.2">leveraging wireless broadcast to support shared local views
+and low-latency interactivity;<a href="#section-4-5.2" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-4-2.3">Low Latency Low Loss Scalable throughput technology (L4S) can significantly reduce
-lag in an interactive cloud-based video game (<span>[<a href="#I-D.ietf-tsvwg-l4s-arch" class="cite xref">I-D.ietf-tsvwg-l4s-arch</a>]</span>).
-L4S relies on ECN (Explicit Congestion Notification) in the IP header to indicate
-queue build-up in the radio access network to the application.<a href="#section-4-2.3" class="pilcrow">¶</a>
+        <li class="normal" id="section-4-5.3">privacy, selective attention, content filtering,
+and autonomous interactions, as well as ownership and
+control on the publishing side;<a href="#section-4-5.3" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-4-2.4">The APplication-aware Networking (APN) aims to develop a framework to enable
-fine-granularity network service provisioning (traffic operations) within the
-network domain(s) that supports APN (<span>[<a href="#I-D.li-apn-framework" class="cite xref">I-D.li-apn-framework</a>]</span>). APN aims to use
-the ability to apply policies to traffic flows entering into the infrastructure
-(APN domain).
-In modern networks, where things such as deterministic networking and networking
-slicing are required, there is a requirement for more functionality than QoS can
-provide.<a href="#section-4-2.4" class="pilcrow">¶</a>
-</li>
-        <li class="normal" id="section-4-2.5">Glass to Glass Internet Ecosystem (GGIE) was presented few years ago and aimed to
-leverage IPv6 Glass to Glass. End to end Internet digital video ecosystem focusing
-on all phases of the video life cycle: Capture-Edit-Package-Distribute-Find-Watch.
-The network is assumed to be IPv6-only. More details can be found in
-<span>[<a href="#I-D.deen-daigle-ggie" class="cite xref">I-D.deen-daigle-ggie</a>]</span>.<a href="#section-4-2.5" class="pilcrow">¶</a>
+        <li class="normal" id="section-4-5.4">supporting in-network processing for objects replication
+and transformation.<a href="#section-4-5.4" class="pilcrow">¶</a>
 </li>
       </ul>
 </section>
@@ -1359,43 +1373,39 @@ The network is assumed to be IPv6-only. More details can be found in
 <a href="#section-9" class="section-number selfRef">9. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
       </h2>
 <dl class="references">
-<dt id="I-D.deen-daigle-ggie">[I-D.deen-daigle-ggie]</dt>
-      <dd>
-<span class="refAuthor">Deen, G.</span> and <span class="refAuthor">L. Daigle</span>, <span class="refTitle">"Glass to Glass Internet Ecosystem Introduction"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-deen-daigle-ggie-02</span>, <time datetime="2016-10-24" class="refDate">24 October 2016</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-deen-daigle-ggie-02">https://datatracker.ietf.org/doc/html/draft-deen-daigle-ggie-02</a>&gt;</span>. </dd>
-<dd class="break"></dd>
 <dt id="I-D.han-iccrg-arvr-transport-problem">[I-D.han-iccrg-arvr-transport-problem]</dt>
       <dd>
 <span class="refAuthor">Han, L.</span> and <span class="refAuthor">K. Smith</span>, <span class="refTitle">"Problem Statement: Transport Support for Augmented and Virtual Reality Applications"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-han-iccrg-arvr-transport-problem-01</span>, <time datetime="2017-03-12" class="refDate">12 March 2017</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-han-iccrg-arvr-transport-problem-01">https://datatracker.ietf.org/doc/html/draft-han-iccrg-arvr-transport-problem-01</a>&gt;</span>. </dd>
 <dd class="break"></dd>
-<dt id="I-D.ietf-tsvwg-l4s-arch">[I-D.ietf-tsvwg-l4s-arch]</dt>
+<dt id="I-D.ietf-moq-requirements">[I-D.ietf-moq-requirements]</dt>
       <dd>
-<span class="refAuthor">Briscoe, B.</span>, <span class="refAuthor">De Schepper, K.</span>, <span class="refAuthor">Bagnulo, M.</span>, and <span class="refAuthor">G. White</span>, <span class="refTitle">"Low Latency, Low Loss, and Scalable Throughput (L4S) Internet Service: Architecture"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-tsvwg-l4s-arch-20</span>, <time datetime="2022-08-29" class="refDate">29 August 2022</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-l4s-arch-20">https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-l4s-arch-20</a>&gt;</span>. </dd>
+<span class="refAuthor">Gruessing, J.</span> and <span class="refAuthor">S. Dawkins</span>, <span class="refTitle">"Media Over QUIC - Use Cases and Requirements for Media Transport Protocol Design"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-moq-requirements-00</span>, <time datetime="2023-06-05" class="refDate">5 June 2023</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-moq-requirements-00">https://datatracker.ietf.org/doc/html/draft-ietf-moq-requirements-00</a>&gt;</span>. </dd>
 <dd class="break"></dd>
-<dt id="I-D.jennings-moq-quicr-arch">[I-D.jennings-moq-quicr-arch]</dt>
+<dt id="I-D.ietf-quic-multipath">[I-D.ietf-quic-multipath]</dt>
       <dd>
-<span class="refAuthor">Jennings, C. F.</span> and <span class="refAuthor">S. Nandakumar</span>, <span class="refTitle">"QuicR - Media Delivery Protocol over QUIC"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-jennings-moq-quicr-arch-01</span>, <time datetime="2022-07-11" class="refDate">11 July 2022</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-jennings-moq-quicr-arch-01">https://datatracker.ietf.org/doc/html/draft-jennings-moq-quicr-arch-01</a>&gt;</span>. </dd>
+<span class="refAuthor">Liu, Y.</span>, <span class="refAuthor">Ma, Y.</span>, <span class="refAuthor">De Coninck, Q.</span>, <span class="refAuthor">Bonaventure, O.</span>, <span class="refAuthor">Huitema, C.</span>, and <span class="refAuthor">M. Kühlewind</span>, <span class="refTitle">"Multipath Extension for QUIC"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-quic-multipath-04</span>, <time datetime="2023-03-13" class="refDate">13 March 2023</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-quic-multipath-04">https://datatracker.ietf.org/doc/html/draft-ietf-quic-multipath-04</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="I-D.jennings-moq-proto">[I-D.jennings-moq-proto]</dt>
+      <dd>
+<span class="refAuthor">Jennings, C. F.</span> and <span class="refAuthor">S. Nandakumar</span>, <span class="refTitle">"QuicR - Media Delivery Protocol over QUIC"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-jennings-moq-proto-00</span>, <time datetime="2023-03-13" class="refDate">13 March 2023</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-jennings-moq-proto-00">https://datatracker.ietf.org/doc/html/draft-jennings-moq-proto-00</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.li-apn-framework">[I-D.li-apn-framework]</dt>
       <dd>
 <span class="refAuthor">Li, Z.</span>, <span class="refAuthor">Peng, S.</span>, <span class="refAuthor">Voyer, D.</span>, <span class="refAuthor">Li, C.</span>, <span class="refAuthor">Liu, P.</span>, <span class="refAuthor">Cao, C.</span>, and <span class="refAuthor">G. S. Mishra</span>, <span class="refTitle">"Application-aware Networking (APN) Framework"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-li-apn-framework-07</span>, <time datetime="2023-04-03" class="refDate">3 April 2023</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-li-apn-framework-07">https://datatracker.ietf.org/doc/html/draft-li-apn-framework-07</a>&gt;</span>. </dd>
 <dd class="break"></dd>
-<dt id="MPQUIC">[MPQUIC]</dt>
-      <dd>
-<span class="refAuthor">Liu, Y.</span>, <span class="refAuthor">Ma, Y.</span>, <span class="refAuthor">De Coninck, Q.</span>, <span class="refAuthor">Bonaventure, O.</span>, <span class="refAuthor">Huitema, C.</span>, and <span class="refAuthor">M. Kühlewind</span>, <span class="refTitle">"Multipath Extension for QUIC"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-quic-multipath-04</span>, <time datetime="2023-03-13" class="refDate">13 March 2023</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-quic-multipath-04">https://datatracker.ietf.org/doc/html/draft-ietf-quic-multipath-04</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="MPTCP">[MPTCP]</dt>
-      <dd>
-<span class="refAuthor">Ford, A.</span>, <span class="refAuthor">Raiciu, C.</span>, <span class="refAuthor">Handley, M.</span>, <span class="refAuthor">Bonaventure, O.</span>, and <span class="refAuthor">C. Paasch</span>, <span class="refTitle">"TCP Extensions for Multipath Operation with Multiple Addresses"</span>, <span class="seriesInfo">RFC 8684</span>, <span class="seriesInfo">DOI 10.17487/RFC8684</span>, <time datetime="2020-03" class="refDate">March 2020</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8684">https://www.rfc-editor.org/rfc/rfc8684</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="QUIC">[QUIC]</dt>
-      <dd>
-<span class="refAuthor">Iyengar, J., Ed.</span> and <span class="refAuthor">M. Thomson, Ed.</span>, <span class="refTitle">"QUIC: A UDP-Based Multiplexed and Secure Transport"</span>, <span class="seriesInfo">RFC 9000</span>, <span class="seriesInfo">DOI 10.17487/RFC9000</span>, <time datetime="2021-05" class="refDate">May 2021</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9000">https://www.rfc-editor.org/rfc/rfc9000</a>&gt;</span>. </dd>
-<dd class="break"></dd>
 <dt id="RFC7927">[RFC7927]</dt>
       <dd>
 <span class="refAuthor">Kutscher, D., Ed.</span>, <span class="refAuthor">Eum, S.</span>, <span class="refAuthor">Pentikousis, K.</span>, <span class="refAuthor">Psaras, I.</span>, <span class="refAuthor">Corujo, D.</span>, <span class="refAuthor">Saucez, D.</span>, <span class="refAuthor">Schmidt, T.</span>, and <span class="refAuthor">M. Waehlisch</span>, <span class="refTitle">"Information-Centric Networking (ICN) Research Challenges"</span>, <span class="seriesInfo">RFC 7927</span>, <span class="seriesInfo">DOI 10.17487/RFC7927</span>, <time datetime="2016-07" class="refDate">July 2016</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7927">https://www.rfc-editor.org/rfc/rfc7927</a>&gt;</span>. </dd>
 <dd class="break"></dd>
-<dt id="TCP">[TCP]</dt>
+<dt id="RFC8684">[RFC8684]</dt>
+      <dd>
+<span class="refAuthor">Ford, A.</span>, <span class="refAuthor">Raiciu, C.</span>, <span class="refAuthor">Handley, M.</span>, <span class="refAuthor">Bonaventure, O.</span>, and <span class="refAuthor">C. Paasch</span>, <span class="refTitle">"TCP Extensions for Multipath Operation with Multiple Addresses"</span>, <span class="seriesInfo">RFC 8684</span>, <span class="seriesInfo">DOI 10.17487/RFC8684</span>, <time datetime="2020-03" class="refDate">March 2020</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8684">https://www.rfc-editor.org/rfc/rfc8684</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9000">[RFC9000]</dt>
+      <dd>
+<span class="refAuthor">Iyengar, J., Ed.</span> and <span class="refAuthor">M. Thomson, Ed.</span>, <span class="refTitle">"QUIC: A UDP-Based Multiplexed and Secure Transport"</span>, <span class="seriesInfo">RFC 9000</span>, <span class="seriesInfo">DOI 10.17487/RFC9000</span>, <time datetime="2021-05" class="refDate">May 2021</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9000">https://www.rfc-editor.org/rfc/rfc9000</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC9293">[RFC9293]</dt>
     <dd>
 <span class="refAuthor">Eddy, W., Ed.</span>, <span class="refTitle">"Transmission Control Protocol (TCP)"</span>, <span class="seriesInfo">STD 7</span>, <span class="seriesInfo">RFC 9293</span>, <span class="seriesInfo">DOI 10.17487/RFC9293</span>, <time datetime="2022-08" class="refDate">August 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9293">https://www.rfc-editor.org/rfc/rfc9293</a>&gt;</span>. </dd>
 <dd class="break"></dd>
