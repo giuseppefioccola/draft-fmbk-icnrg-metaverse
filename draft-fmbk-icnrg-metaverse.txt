@@ -5,12 +5,12 @@
 Network Working Group                                        G. Fioccola
 Internet-Draft                                       Huawei Technologies
 Intended status: Informational                                 P. Mendes
-Expires: 6 January 2024                                           Airbus
+Expires: 11 January 2024                                          Airbus
                                                                 J. Burke
                                                               UCLA REMAP
                                                              D. Kutscher
                                                                HKUST(GZ)
-                                                             5 July 2023
+                                                            10 July 2023
 
 
              Metaverse impacts on the Internet technologies
@@ -44,7 +44,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 6 January 2024.
+   This Internet-Draft will expire on 11 January 2024.
 
 Copyright Notice
 
@@ -144,9 +144,8 @@ Table of Contents
    and their digital twins).  It should be able to enable a fully
    augmented experience, bridging Web 3.0 technologies, artificial
    intelligence, blended realities (digital and physical), and
-   distributed ledger technologies.  Similarly for HTML, it would evolve
-   in the direction of something like HyperSpace Modeling Language
-   (HSML).
+   distributed ledger technologies.  Similarly, HTML would evolve in the
+   direction of something like HyperSpace Modeling Language (HSML).
 
    Looking at the transport and network layer, there are the same gaps
    which needs to be overcame too.  There are elaborate solutions for
@@ -182,10 +181,10 @@ Table of Contents
    *  The Computing-Aware Traffic Steering (CATS) aims to analyze the
       problem on the edge node, which makes a decision based on the
       metrics of interest, and then steers the traffic to a node that
-      serves a service instance.  Indeed, for some services (e.g.  AR/
-      VR), the performance experienced by the end users depends on both
-      network metrics such as bandwidth and latency, and compute metrics
-      such as processing, storage capabilities, and capacity.
+      serves a service instance.  Indeed, for AR/VR services, the
+      performance experienced by the end users depends on both network
+      metrics such as bandwidth and latency, and compute metrics such as
+      processing, storage capabilities, and capacity.
 
    In all of these approaches, the Metaverse is considered as an overlay
    application with corresponding infrastructure dependencies, but this
@@ -202,13 +201,13 @@ Table of Contents
 
    The Information-Centric Networking (ICN) introduces named information
    objects, e.g. media contents, as the central concept as opposed to a
-   physical computer, or node.  In ICN approaches, the principal
-   paradigm is not host-to-host communication as in the current Internet
-   architecture ([RFC7927]).  The increasing demand for highly scalable
-   and efficient distribution of content has motivated the development
-   of architectures that focus on information objects, their properties,
-   and receiver interest in the network to achieve efficient and
-   reliable distribution of such objects.
+   physical computer, or node ([RFC7927]).  In ICN approaches, the
+   principal paradigm is not host-to-host communication as in the
+   current Internet architecture.  The increasing demand for highly
+   scalable and efficient distribution of content has motivated the
+   development of architectures that focus on information objects, their
+   properties, and receiver interest in the network to achieve efficient
+   and reliable distribution of such objects.
 
    Therefore, for the Metaverse, it would be better to assume
    information-centric system where most applications participate in
@@ -258,6 +257,11 @@ Table of Contents
    investigated, and, for example, Hybrid Information-Centric Networking
    (hICN), which implements information-networking functionalities into
    IPv6 ([I-D.muscariello-intarea-hicn], can provide a solution.
+
+   It would be theoretically possible to leverage the solutions
+   mentioned in the previous section in order to reach the above ICN
+   oriented capabilities.  But a systemic approach would be highly
+   desirable in the longer term.
 
 5.  Security Considerations
 
