@@ -13,7 +13,7 @@ Expires: 11 January 2024                                          Airbus
                                                             10 July 2023
 
 
-                          Metaverse Networking
+                     Information-Centric Metaverse
                    draft-fmbk-icnrg-metaverse-latest
 
 Abstract
@@ -65,8 +65,20 @@ Table of Contents
    1.  Introduction
    2.  Requirements and Gaps
    3.  Current and Emerging Mainstream Approaches
-   4.  Information-Centric Metaverse
-     4.1.  Technical challenges
+   4.  Opportunities and Challenges for Information-Centric Metaverse
+     4.1.  Scalable multimedia communication
+       4.1.1.  Issues today
+       4.1.2.  ICN Support
+       4.1.3.  Research Opportunities
+     4.2.  Interaction with applications
+       4.2.1.  Issues today
+       4.2.2.  ICN Support
+       4.2.3.  Research Opportunities
+     4.3.  In-Network Computing
+       4.3.1.  Issues today
+       4.3.2.  ICN Support
+       4.3.3.  Research Opportunities
+     4.4.  Interoperability with existing infrastructure
    5.  Security Considerations
    6.  IANA Considerations
    7.  Contributors
@@ -231,7 +243,7 @@ Table of Contents
    application and presentation) layer, however based on the assumption
    of existing networking technology and overlay approaches.
 
-4.  Information-Centric Metaverse
+4.  Opportunities and Challenges for Information-Centric Metaverse
 
    Considering the gaps and perceived requirements from applications and
    proposed application layer protocols, we can reason about a holistic
@@ -248,14 +260,12 @@ Table of Contents
    properties, and receiver interest in the network to achieve efficient
    and reliable distribution of such objects.
 
-   Therefore, for the Metaverse, it would be better to assume
-   information-centric system where most applications participate in
-   granular 3D content exchange, context-aware integration with the
-   physical world, and other Metaverse-relevant services.  The
-   assumption is that the Metaverse is an information-centric concept
-   that will become synonymous with the network itself.
-
-4.1.  Technical challenges
+   Therefore, we can conceive the Metaverse as an information-centric
+   system where most applications participate in granular 3D content
+   exchange, context-aware integration with the physical world, and
+   other Metaverse-relevant services.  The assumption is that the
+   Metaverse is an information-centric concept that will become
+   synonymous with the network itself.
 
    Many applications already work with data-oriented paradigms.  Mapping
    them to a host-centric network model creates complexities and
@@ -276,21 +286,205 @@ Table of Contents
    and not within separated application silos as today’s initial
    prototypes.
 
-   There are four ICN capabilities critical to Metaverse concepts:
+   In the following, we discuss issues with today's technologies, ICN
+   support that could be leveraged, and research opportunities for the
+   ICN community for four topics:
 
-   *  scalable and robust multi-destination communication, overcoming IP
-      multicast challenges such as inter-domain routing, scalability,
-      and routing communication overhead;
+   1.  Scalable multimedia communication;
 
-   *  leveraging wireless broadcast to support shared local views and
-      low-latency interactivity;
+   2.  Interaction with applications;
 
-   *  privacy, selective attention, content filtering, and autonomous
-      interactions, as well as ownership and control on the publishing
-      side;
+   3.  In-network computing; and
 
-   *  supporting in-network processing for objects replication and
-      transformation.
+   4.  Interoperability with existing infrastructure.
+
+4.1.  Scalable multimedia communication
+
+4.1.1.  Issues today
+
+   *  Low-latency live streaming is not easy and not efficient in the
+      Internet today.  CDN-based DASH incurs high latencies.
+
+   *  Current trends: blending of real-time interactive (WebRTC with
+      RTP) and streaming (DASH), for example: Amazon Twitch, Meta Rush,
+      IETF Media-over-QUIC, Cisco QuicR
+
+   *  What is needed:
+
+      -  fine-granular media distribution that supports both interactive
+         and streaming;
+
+      -  scalable multi-destination distribution, i.e., some kind of in-
+         network replication;
+
+      -  ability to leverage wireless broadcast such as 5G Broadcast;
+         and
+
+      -  support for hetergeneous devices and edge networks, i.e.,
+         different quality layers, possibly dynamic transcoding.
+
+4.1.2.  ICN Support
+
+   ICN is generally supporting most of these requirements: * multi-
+   destination distribution can be achieved through automatic in-network
+   replication and interest aggregation, further supported by
+   opportunistic caching. * ICN provides a uniform interface for unicast
+   and "multicast" (i.e., there is no difference for consumers). * IP-
+   Multicast issues (inter-domain, routing scalability) do not apply *
+   Wireless broadcast could be leveraged where available, without
+   requiring application-aware in edge routers. * Receiver-driven
+   operation conducive to supporting different quality levels, like in
+   DASH today: receiver has all the knowledge directly (current
+   performance) and can make timely decisions. * Consumer mobility is an
+   efficient operation in ICN (a non-operation).
+
+4.1.3.  Research Opportunities
+
+   *  Based on ICN's basic capabilities, actual systems would need
+      specific approaches for quality adaptation, e.g.,
+
+      -  use of layered coding; and
+
+      -  role of in-network transcoding.
+
+   *  In order to achieve low-latency and QoS, more work is needed for
+
+      -  fine-tuning with respect to interest aggregation, caching; and
+         for
+
+      -  prioritizing "flows", e.g., audio over video.
+
+   *  Sender mobility has seen some proposals in research that need to
+      be validated.
+
+   *  More experiments are needed with large-scale interactive
+      multimedia communication and low-latency transport.
+
+   *  Actual application development and deployment is needed to
+      gradually develop best practices, software stacks, and re-usable
+      application components.
+
+      -  For initial deployments, some kind of overlay topology over the
+         current Internet might be needed.
+
+      -  Whereas the technology (different faces and underlay protocols)
+         is essentially ready, there are other issues the deployment and
+         efficient operation of such overlays (shortest path
+         communication, routing, reliability).
+
+4.2.  Interaction with applications
+
+4.2.1.  Issues today
+
+   Many applications, not only the Metaverse, work inherently with data-
+   oriented paradigms when they are accessing named data, objects etc.
+   Mapping this to a connection-based communication model creates
+   complexities and robustness issues and would not result in good
+   abstractions for systems.
+
+   In Metaverse applications, data can potentially be shared efficiently
+   – between nodes and within one node/process.  Connection-based
+   communication models make it hard/impossible to do so.
+
+   Application layer data structures in VR (3D models, scene
+   descriptions) are based on object hierarchies, connection-based
+   systems may not be able to take advantage of it.
+
+4.2.2.  ICN Support
+
+   ICN generally enables direct data-oriented communication: just names
+   and objects so that location, storage contexts (files etc.) become
+   less relevant.  In addition ICN provides
+
+   *  named-based APIs to applications;
+
+   *  support for object collections through manifests;
+
+   *  additional "middleware" such as dataset synchronization; and
+
+   *  data-sharing is generally supported, which has benefits beyond
+      networking, e.g., zero-copy sharing in processes etc.
+
+4.2.3.  Research Opportunities
+
+   *  Work should be started on the development of information-centric
+      hypermedia concepts, i.e., linking from object collections to
+      other objects/collections.
+
+   *  Manifest technologies such as FLIC should be extended to support
+      dynamically created objects.
+
+   *  Concepts for dealing with "mutable objects" (or mutable
+      "information") should be developed, i.e., how to deal with updates
+      without giving up data immutability.
+
+   *  The relationship between application-layer data-oriented operation
+      and network-layer needs to be explored further, e.g.,
+
+      -  Would there be any differences?
+
+      -  Do we need to think about robust namespace mappings schemes?
+
+   *  Concepts and mechanisms for privacy, selective attention, content
+      filtering, and autonomous interactions, as well as ownership and
+      control on the publishing side are needed.
+
+   *  In general more applications should be developed to enable more
+      experiments.
+
+4.3.  In-Network Computing
+
+   In-network computing can support Metaverse systems in different ways:
+
+   *  transcoding (to support heterogeneous receiver groups and networks
+      better);
+
+   *  coding for better communication robustness & efficiency;
+
+   *  rendering for offloading clients and servers;
+
+   *  compression and decompression on various levels, including
+      semantic communication;
+
+   *  ad insertion; and
+
+   *  potentially for future decomposed Metaverse systems.
+
+4.3.1.  Issues today
+
+   *  In-network computing today is typically limited to coarse-grained
+      CDN-style computing, include Multi-Access Edge Computing.
+
+   *  Current trust and security frameworks require TLS connection
+      termination, i.e., represent an overlay approach, which is not
+      conducive to low latency communication.
+
+   *  Dynamic, just-in-time, instantiation of computing function on
+      application-agnostic platforms is not available.
+
+4.3.2.  ICN Support
+
+   *  The named-data approach is generally useful for distributed
+      computing (NFN, RICE, CFN).
+
+   *  ICN's security model makes it possible to do on-path computing /
+      data transformation securely
+
+   *  discovery of functions and request forwarding can be punted on
+      regular ICN mechanisms (name-based forwarding).
+
+4.3.3.  Research Opportunities
+
+   *  Robust distributed computing interaction models (RMI, Dataflow,
+      REST) should be further developed and tested.
+
+   *  Specific approaches such as in-network media transcoding should be
+      developed.
+
+   *  In general, more experiments for different types of applications
+      are needed.
+
+4.4.  Interoperability with existing infrastructure
 
    In addition, the interoperability aspects also need to be
    investigated, and, for example, Hybrid Information-Centric Networking
