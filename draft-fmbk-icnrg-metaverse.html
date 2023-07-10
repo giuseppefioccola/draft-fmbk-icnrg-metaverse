@@ -1163,13 +1163,13 @@ It discusses the Metaverse as an Information-Centric Network (ICN).<a href="#sec
             <p id="section-toc.1-1.1.1" class="keepWithNext"><a href="#section-1" class="auto internal xref">1</a>.  <a href="#name-introduction" class="internal xref">Introduction</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2">
-            <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-requirements" class="internal xref">Requirements</a></p>
+            <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-requirements-and-gaps" class="internal xref">Requirements and Gaps</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3">
-            <p id="section-toc.1-1.3.1" class="keepWithNext"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-gap-analysis" class="internal xref">Gap Analysis</a></p>
+            <p id="section-toc.1-1.3.1" class="keepWithNext"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-current-and-emerging-mainst" class="internal xref">Current and Emerging  Mainstream Approaches</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
-            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-solution-with-an-icn-approa" class="internal xref">Solution with an ICN approach</a></p>
+            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-information-centric-metaver" class="internal xref">Information-Centric Metaverse</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.1">
                 <p id="section-toc.1-1.4.2.1.1"><a href="#section-4.1" class="auto internal xref">4.1</a>.  <a href="#name-technical-challenges" class="internal xref">Technical challenges</a></p>
@@ -1246,107 +1246,148 @@ Metaverse systems and beyond.<a href="#section-1-6.3" class="pilcrow">¶</a>
       </ol>
 </section>
 </div>
-<div id="requirements">
+<div id="requirements-and-gaps">
 <section id="section-2">
-      <h2 id="name-requirements">
-<a href="#section-2" class="section-number selfRef">2. </a><a href="#name-requirements" class="section-name selfRef">Requirements</a>
+      <h2 id="name-requirements-and-gaps">
+<a href="#section-2" class="section-number selfRef">2. </a><a href="#name-requirements-and-gaps" class="section-name selfRef">Requirements and Gaps</a>
       </h2>
-<p id="section-2-1"><span>[<a href="#I-D.han-iccrg-arvr-transport-problem" class="cite xref">I-D.han-iccrg-arvr-transport-problem</a>]</span> started to analyze the requirements of
-VR and AR to networking, especially to transport protocol.
-As emerging technology, the Metaverse brings up a lot of challenges to technologies
-such as information display, image processing, fast computing and networking.
+<p id="section-2-1"><span>[<a href="#I-D.han-iccrg-arvr-transport-problem" class="cite xref">I-D.han-iccrg-arvr-transport-problem</a>]</span> started to analyze the
+requirements of VR and AR to networking from a transport protocol
+perspective.
+
 Some of the requirements are:<a href="#section-2-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-2-2.1">Low latency and High-Speed transport to reach services in one-hop and for real-time
-user interactions<a href="#section-2-2.1" class="pilcrow">¶</a>
+<li class="normal" id="section-2-2.1">low latency and High-Speed transport to reach services in one-hop
+and for real-time user interactions;<a href="#section-2-2.1" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-2-2.2">Intelligent control and SLA real-time monitoring to convey the traffic and manage
-network resources and source/route reselection<a href="#section-2-2.2" class="pilcrow">¶</a>
+        <li class="normal" id="section-2-2.2">intelligent control and SLA real-time monitoring to convey the traffic and manage
+network resources and source/route re-selection;<a href="#section-2-2.2" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-2-2.3">Decentralization and Edge Services by positioning the data close to the user<a href="#section-2-2.3" class="pilcrow">¶</a>
+        <li class="normal" id="section-2-2.3">decentralization and Edge Services by positioning the data close to the user; and<a href="#section-2-2.3" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-2-2.4">Reducing data sizes through resolution changes, compression, and more efficient
-encodings<a href="#section-2-2.4" class="pilcrow">¶</a>
+        <li class="normal" id="section-2-2.4">reducing data sizes through resolution changes, compression, and
+more efficient encodings.<a href="#section-2-2.4" class="pilcrow">¶</a>
 </li>
       </ul>
+<p id="section-2-3"><span>[<a href="#socialAR-measurements" class="cite xref">socialAR-measurements</a>]</span> performed measurements with five popular
+social VR platforms. The experimental results revealed that all these
+platforms face fundamental technical challenges considering the claims
+that often associated with the Metaverse. One issue was poor
+scalability with respect to the number of users in one session:
+throughput, end-to-end latency, and on-device computation resource
+utilization increase almost linearly with the number of users. Other
+issues include noticeable load and reduced achievable video rendering
+frame rates and considerable network utilization even with smaller
+numbers of users.<a href="#section-2-3" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="gap-analysis">
+<div id="current-and-emerging-mainstream-approaches">
 <section id="section-3">
-      <h2 id="name-gap-analysis">
-<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-gap-analysis" class="section-name selfRef">Gap Analysis</a>
+      <h2 id="name-current-and-emerging-mainst">
+<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-current-and-emerging-mainst" class="section-name selfRef">Current and Emerging  Mainstream Approaches</a>
       </h2>
-<p id="section-3-1">It is known that HTML and HTTP are used to locate a web address, but they do not
-provide a sufficient technological foundation for the disparate technologies of
-the Web 3.0. In this regard, the HyperSpace Transaction Protocol (HSTP), as
-described by <span>[<a href="#IEEE-P2874" class="cite xref">IEEE-P2874</a>]</span>, is an evolution of HTTP to connect Metaverse spaces,
-including all data and entities (e.g. physical people, cities, buildings, objects,
-and their digital twins). It should be able to enable a fully augmented experience,
-bridging Web 3.0 technologies, artificial intelligence, blended realities (digital
-and physical), and distributed ledger technologies. Similarly, HTML would evolve
-in the direction of something like HyperSpace Modeling Language (HSML).<a href="#section-3-1" class="pilcrow">¶</a></p>
-<p id="section-3-2">Looking at the transport and network layer, there are the same gaps which needs to
-be overcame too. There are elaborate solutions for dealing with bandwidth limitations,
-network congestion, lossy transport protocols, and the ever growing size of video data,
-to address the above requirements, for instance:<a href="#section-3-2" class="pilcrow">¶</a></p>
+<p id="section-3-1">Different IETF technologies have been proposed to address some of the
+above-mentioned issues and to provider a better service for Metaverse
+applications. In the following, we list a few of them and will discuss
+them in more detail in a future version of this Internet Draft. For
+example, on the network and transport layer, there are elaborate
+solutions for dealing with bandwidth limitations, network congestion,
+lossy transport protocols, and the ever growing size of video data, to
+address the above requirements, for instance:<a href="#section-3-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-3-3.1">MPTCP<span>[<a href="#RFC8684" class="cite xref">RFC8684</a>]</span> and MPQUIC<span>[<a href="#I-D.ietf-quic-multipath" class="cite xref">I-D.ietf-quic-multipath</a>]</span> are the expansions of
-TCP<span>[<a href="#RFC9293" class="cite xref">RFC9293</a>]</span> and QUIC<span>[<a href="#RFC9000" class="cite xref">RFC9000</a>]</span> in order to dispatch packets over multiple paths
-to maximize throughput.<a href="#section-3-3.1" class="pilcrow">¶</a>
+<li class="normal" id="section-3-2.1">MPTCP<span>[<a href="#RFC8684" class="cite xref">RFC8684</a>]</span> and MPQUIC<span>[<a href="#I-D.ietf-quic-multipath" class="cite xref">I-D.ietf-quic-multipath</a>]</span> are the
+expansions of TCP<span>[<a href="#RFC9293" class="cite xref">RFC9293</a>]</span> and QUIC<span>[<a href="#RFC9000" class="cite xref">RFC9000</a>]</span> in order to
+dispatch packets over multiple paths to maximize throughput.<a href="#section-3-2.1" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-3-3.2">Dynamic Adaptive Streaming over HTTP (DASH) aim to improve the viewport quality
-of immersive videos by refining the tiles delivery. But client-driven nature of DASH
-introduces less control on the server side.<a href="#section-3-3.2" class="pilcrow">¶</a>
+        <li class="normal" id="section-3-2.2">Dynamic Adaptive Streaming over HTTP (DASH) aim to improve the
+viewport quality of immersive videos by refining the tiles
+delivery. But client-driven nature of DASH introduces less control
+on the server side.<a href="#section-3-2.2" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-3-3.3">Media over QUIC (MoQ) (<span>[<a href="#I-D.ietf-moq-requirements" class="cite xref">I-D.ietf-moq-requirements</a>]</span>) and extensions such as QuicR
-(<span>[<a href="#I-D.jennings-moq-proto" class="cite xref">I-D.jennings-moq-proto</a>]</span>) use similar concepts and delivery mechanisms to those
-used by CDN and named objects.
-There are fundamental characteristics that QuicR provides for ultra low latency delivery,
-by leveraging the characteristics of QUIC protocol.<a href="#section-3-3.3" class="pilcrow">¶</a>
+        <li class="normal" id="section-3-2.3">Media over QUIC (MoQ) (<span>[<a href="#I-D.ietf-moq-requirements" class="cite xref">I-D.ietf-moq-requirements</a>]</span>) and
+extensions such as QuicR (<span>[<a href="#I-D.jennings-moq-proto" class="cite xref">I-D.jennings-moq-proto</a>]</span>) use similar
+concepts and delivery mechanisms to those used by CDN and named
+objects.  There are fundamental characteristics that QuicR provides
+for ultra low latency delivery, by leveraging the characteristics of
+QUIC protocol.<a href="#section-3-2.3" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-3-3.4">The APplication-aware Networking (APN) aims to develop a framework to enable
-fine-granularity network service provisioning (traffic operations) within the
-network domain(s) that supports APN (<span>[<a href="#I-D.li-apn-framework" class="cite xref">I-D.li-apn-framework</a>]</span>). APN aims to use
-the ability to apply policies to traffic flows entering into the infrastructure.
-In modern networks, where things such as deterministic networking and networking
-slicing are required, there is a requirement for more functionality than QoS can
-provide.<a href="#section-3-3.4" class="pilcrow">¶</a>
+        <li class="normal" id="section-3-2.4">The APplication-aware Networking (APN) aims to develop a framework
+to enable fine-granularity network service provisioning (traffic
+operations) within the network domain(s) that supports APN
+(<span>[<a href="#I-D.li-apn-framework" class="cite xref">I-D.li-apn-framework</a>]</span>). APN aims to use the ability to apply
+policies to traffic flows entering into the infrastructure.  In
+modern networks, where things such as deterministic networking and
+networking slicing are required, there is a requirement for more
+functionality than QoS can provide.<a href="#section-3-2.4" class="pilcrow">¶</a>
 </li>
-        <li class="normal" id="section-3-3.5">The Computing-Aware Traffic Steering (CATS) aims to analyze the problem on the
-edge node, which makes a decision based on the metrics of interest, and then
-steers the traffic to a node that serves a service instance. Indeed, for AR/VR
-services, the performance experienced by the end users depends on both network
-metrics such as bandwidth and latency, and compute metrics such as processing,
-storage capabilities, and capacity.<a href="#section-3-3.5" class="pilcrow">¶</a>
+        <li class="normal" id="section-3-2.5">The Computing-Aware Traffic Steering (CATS) aims to analyze the
+problem on the edge node, which makes a decision based on the
+metrics of interest, and then steers the traffic to a node that
+serves a service instance. Indeed, for AR/VR services, the
+performance experienced by the end users depends on both network
+metrics such as bandwidth and latency, and compute metrics such as
+processing, storage capabilities, and capacity.<a href="#section-3-2.5" class="pilcrow">¶</a>
 </li>
       </ul>
-<p id="section-3-4">In all of these approaches, the Metaverse is considered as an overlay application
-with corresponding infrastructure dependencies, but this increases the current gaps
-(and resulting costs and technical complexity) between distributed applications and
-the underlying network architecture.<a href="#section-3-4" class="pilcrow">¶</a></p>
-<p id="section-3-5">Additionally, it is important to understand which networking technology can be aligned
-with HSTP <span>[<a href="#IEEE-P2874" class="cite xref">IEEE-P2874</a>]</span>. Given that the current Internet stack is host driven, it is
-misaligned with the application layer that is data driven.<a href="#section-3-5" class="pilcrow">¶</a></p>
+<p id="section-3-3">In all of these approaches, the Metaverse is considered as an overlay
+application with corresponding infrastructure dependencies, but this
+potentially increases the current gaps (and resulting costs and
+technical complexity) between distributed applications and the
+underlying network architecture.<a href="#section-3-3" class="pilcrow">¶</a></p>
+<p id="section-3-4">In the 3D hypermedia space, one proposal for a new "Spatial Web"
+Framework is the HyperSpace Transaction Protocol (HSTP), as described
+by <span>[<a href="#IEEE-P2874" class="cite xref">IEEE-P2874</a>]</span>, intended to "enable interoperable, semantically
+compatible connections between connected hardware (e.g. autonomous
+drones, sensors, smart devices, robots) and software (e.g. services,
+platforms, applications, artificial intelligence systems)". The
+specification, which is not accessible publically, is supposed to
+include<a href="#section-3-4" class="pilcrow">¶</a></p>
+<ol start="1" type="1" class="normal type-1" id="section-3-5">
+<li id="section-3-5.1">a spatial range query format and response
+language for requesting data about objects within a dimensional range
+(spatial, temperature, pressure, motion) and their content.<a href="#section-3-5.1" class="pilcrow">¶</a>
+</li>
+        <li id="section-3-5.2">a semantic data ontology schema for describing objects, relations,
+and actions in a standardized way<a href="#section-3-5.2" class="pilcrow">¶</a>
+</li>
+        <li id="section-3-5.3">a verifiable credentialing and certification method for
+permissioning create, retrieve, update, and delete (CRUD) access to
+devices, locations, users, and data; and<a href="#section-3-5.3" class="pilcrow">¶</a>
+</li>
+        <li id="section-3-5.4">a human and machine-readable contracting language that enables the
+expression and automated execution of legal, financial and physical
+activities.<a href="#section-3-5.4" class="pilcrow">¶</a>
+</li>
+      </ol>
+<p id="section-3-6">We cannot review the technical specification, but the feature
+description seems to suggest an application layer protocol that would
+enable more expressiveness and functionality in the "web" (i.e.,
+application and presentation) layer, however based on the assumption
+of existing networking technology and overlay approaches.<a href="#section-3-6" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="solution-with-an-icn-approach">
+<div id="information-centric-metaverse">
 <section id="section-4">
-      <h2 id="name-solution-with-an-icn-approa">
-<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-solution-with-an-icn-approa" class="section-name selfRef">Solution with an ICN approach</a>
+      <h2 id="name-information-centric-metaver">
+<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-information-centric-metaver" class="section-name selfRef">Information-Centric Metaverse</a>
       </h2>
-<p id="section-4-1">The Information-Centric Networking (ICN) introduces named information objects,
+<p id="section-4-1">Considering the gaps and perceived requirements from applications and
+proposed application layer protocols, we can reason about a holistic
+design that can address the afore-mentioned problems <em>and</em> provide a
+more useful foundations for future hypermedia communication.<a href="#section-4-1" class="pilcrow">¶</a></p>
+<p id="section-4-2">Information-Centric Networking (ICN) introduces named information objects,
 e.g. media contents, as the central concept as opposed to a physical computer,
 or node (<span>[<a href="#RFC7927" class="cite xref">RFC7927</a>]</span>). In ICN approaches, the principal paradigm is not
 host-to-host communication as in the current Internet architecture.
 The increasing demand for highly scalable and efficient distribution of content
 has motivated the development of architectures that focus on information objects,
 their properties, and receiver interest in the network to achieve efficient and
-reliable distribution of such objects.<a href="#section-4-1" class="pilcrow">¶</a></p>
-<p id="section-4-2">Therefore, for the Metaverse, it would be better to assume information-centric system
+reliable distribution of such objects.<a href="#section-4-2" class="pilcrow">¶</a></p>
+<p id="section-4-3">Therefore, for the Metaverse, it would be better to assume information-centric system
 where most applications participate in granular 3D content exchange, context-aware
 integration with the physical world, and other Metaverse-relevant services.
 The assumption is that the Metaverse is an information-centric concept that will become
-synonymous with the network itself.<a href="#section-4-2" class="pilcrow">¶</a></p>
+synonymous with the network itself.<a href="#section-4-3" class="pilcrow">¶</a></p>
 <div id="technical-challenges">
 <section id="section-4.1">
         <h3 id="name-technical-challenges">
