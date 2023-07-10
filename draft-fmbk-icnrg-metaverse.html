@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta content="Common,Latin" name="scripts">
 <meta content="initial-scale=1.0" name="viewport">
-<title>Metaverse impacts on the Internet technologies</title>
+<title>Metaverse Networking</title>
 <meta content="Giuseppe Fioccola" name="author">
 <meta content="Paulo Mendes" name="author">
 <meta content="Jeff Burke" name="author">
@@ -1096,7 +1096,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </dd>
 </dl>
 </div>
-<h1 id="title">Metaverse impacts on the Internet technologies</h1>
+<h1 id="title">Metaverse Networking</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
 <p id="section-abstract-1">This document aims to explore the new challenges for the transport network
@@ -1203,34 +1203,47 @@ It discusses the Metaverse as an Information-Centric Network (ICN).<a href="#sec
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
-<p id="section-1-1">The Web today essentially represents a data-centric application layer:
-data named by URLs is manipulated with Representational State Transfer (REST)
-primitives. However, the semantic gap with the underlying host-oriented
-transport is significant.<a href="#section-1-1" class="pilcrow">¶</a></p>
-<p id="section-1-2">The interest in “the Metaverse” suggests that the end-user experience
-of the Web will evolve towards an always-on eXtended Reality (XR).
-Metaverse introduces the concept of a persistent virtual space of
-everyday life as platform-agnostic digital space. It is an interconnected
-and limitless virtual world populated by an extension of physical identities,
-a digital twin of the physical world.
-Metaverse can be seen as the 3D generation of the Internet accessible via
-new non-intrusive interfaces (e.g. holographics) and making use of new types
-of information (e.g. haptic, temperature, smell, emotions, digital transactions)
-that can be exchanged between people, simulated users, and cyber-physical
-systems, while preserving data privacy.<a href="#section-1-2" class="pilcrow">¶</a></p>
-<p id="section-1-3">Metaverse can also be seen as the next generation of Internet, that can be built
-based on Web 3.0. The Web 3.0 is an idea for a new iteration of the World Wide Web
-which incorporates concepts such as decentralization, trustworthy interactions,
-peer-to-peer, data distribution, decentralized identifiers. This is something
-more and different from the vision of Metaverse as full Virtual Reality (VR) and
-Augmented Reality (AR).<a href="#section-1-3" class="pilcrow">¶</a></p>
-<p id="section-1-4">For this reason, the Metaverse should be considered not as an application
-of the current network, but an evolution of the network itself,
-reducing rather than widening the gap between network architecture
-and application semantics.<a href="#section-1-4" class="pilcrow">¶</a></p>
-<p id="section-1-5">The ICN architecture is discussed in this document since it allows to achieve
-the integration of application and network layers with less overhead, low latency,
-better security, and more disruption tolerance suitable to diverse uses cases.<a href="#section-1-5" class="pilcrow">¶</a></p>
+<p id="section-1-1">"Metaverse" is a place-holder for a range of new technologies and
+experiences that is not particularly well-defined, but some working
+definitions include the notion of shared, interoperable, and
+persistent eXtended Reality (XR). Whereas initial prototypes and
+blueprints suggest leveraging or extending existing Internet and Web
+protocols, we can already identify gaps with respect to performance
+and scalability, for example as reported by <span>[<a href="#socialAR-measurements" class="cite xref">socialAR-measurements</a>]</span>.<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-2">Some of the observed performance problems seem to stem from
+fundamental gaps in today's Internet and Web technologies, for
+example, the lack of scalable and robust multi-destination
+communication and the lack of leveraging computing in the network with
+the required level of flexibility and trustworthiness to provide
+offloading services and to enable the ultra-low latencies that some
+Metaverse applications claim to require.<a href="#section-1-2" class="pilcrow">¶</a></p>
+<p id="section-1-3">Different remedies are being proposed, e.g., providing more (costly)
+deterministic communication services through resource reservation and
+scheduling on the Internet, requiring/enabling the network to
+understand application requirements and to provide corresponding QoS,
+extended overlay infrastructure for reducing latencies for CDN-like
+distribution etc.<a href="#section-1-3" class="pilcrow">¶</a></p>
+<p id="section-1-4">Alternatively, one might also take a more principled approach and do
+not take current design and deployment models as a given, but rather
+take Metaverse as a first candidate proposal for a future web
+infrastructure that enables fine-granular 3D content exchange, rich
+interaction between physical and virtual infrastructure, access to
+static data and dynamic computation results for individual users as
+well as for large user groups without the limitations of today's
+platform- and overlay-based system -- i.e., conceive the Metaverse and
+the future web as a fundamentally information-centric system.<a href="#section-1-4" class="pilcrow">¶</a></p>
+<p id="section-1-5">This Internet draft addresses three aspects:<a href="#section-1-5" class="pilcrow">¶</a></p>
+<ol start="1" type="1" class="normal type-1" id="section-1-6">
+<li id="section-1-6.1">the documentation of requirements and observed gaps with the current technology stack;<a href="#section-1-6.1" class="pilcrow">¶</a>
+</li>
+        <li id="section-1-6.2">a discussion of the applicability of different networking and
+distributed computing technologies; and<a href="#section-1-6.2" class="pilcrow">¶</a>
+</li>
+        <li id="section-1-6.3">an initial discussion of a more fundamental and comprehensive
+re-design of a future web that provides useful services for
+Metaverse systems and beyond.<a href="#section-1-6.3" class="pilcrow">¶</a>
+</li>
+      </ol>
 </section>
 </div>
 <div id="requirements">
@@ -1425,7 +1438,7 @@ systemic approach would be highly desirable in the longer term.<a href="#section
 <dd class="break"></dd>
 <dt id="I-D.ietf-quic-multipath">[I-D.ietf-quic-multipath]</dt>
       <dd>
-<span class="refAuthor">Liu, Y.</span>, <span class="refAuthor">Ma, Y.</span>, <span class="refAuthor">De Coninck, Q.</span>, <span class="refAuthor">Bonaventure, O.</span>, <span class="refAuthor">Huitema, C.</span>, and <span class="refAuthor">M. Kühlewind</span>, <span class="refTitle">"Multipath Extension for QUIC"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-quic-multipath-04</span>, <time datetime="2023-03-13" class="refDate">13 March 2023</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-quic-multipath-04">https://datatracker.ietf.org/doc/html/draft-ietf-quic-multipath-04</a>&gt;</span>. </dd>
+<span class="refAuthor">Liu, Y.</span>, <span class="refAuthor">Ma, Y.</span>, <span class="refAuthor">De Coninck, Q.</span>, <span class="refAuthor">Bonaventure, O.</span>, <span class="refAuthor">Huitema, C.</span>, and <span class="refAuthor">M. Kühlewind</span>, <span class="refTitle">"Multipath Extension for QUIC"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-quic-multipath-05</span>, <time datetime="2023-07-10" class="refDate">10 July 2023</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-quic-multipath-05">https://datatracker.ietf.org/doc/html/draft-ietf-quic-multipath-05</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.jennings-moq-proto">[I-D.jennings-moq-proto]</dt>
       <dd>
@@ -1456,8 +1469,12 @@ systemic approach would be highly desirable in the longer term.<a href="#section
 <span class="refAuthor">Iyengar, J., Ed.</span> and <span class="refAuthor">M. Thomson, Ed.</span>, <span class="refTitle">"QUIC: A UDP-Based Multiplexed and Secure Transport"</span>, <span class="seriesInfo">RFC 9000</span>, <span class="seriesInfo">DOI 10.17487/RFC9000</span>, <time datetime="2021-05" class="refDate">May 2021</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9000">https://www.rfc-editor.org/rfc/rfc9000</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9293">[RFC9293]</dt>
-    <dd>
+      <dd>
 <span class="refAuthor">Eddy, W., Ed.</span>, <span class="refTitle">"Transmission Control Protocol (TCP)"</span>, <span class="seriesInfo">STD 7</span>, <span class="seriesInfo">RFC 9293</span>, <span class="seriesInfo">DOI 10.17487/RFC9293</span>, <time datetime="2022-08" class="refDate">August 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9293">https://www.rfc-editor.org/rfc/rfc9293</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="socialAR-measurements">[socialAR-measurements]</dt>
+    <dd>
+<span class="refAuthor">Cheng, R.</span>, <span class="refAuthor">Wu, N.</span>, <span class="refAuthor">Varvello, M.</span>, <span class="refAuthor">Chen, S.</span>, and <span class="refAuthor">B. Han</span>, <span class="refTitle">"Are we ready for metaverse?: a measurement study of social virtual reality platforms"</span>, <span class="seriesInfo">Proceedings of the 22nd ACM Internet Measurement Conference</span>, <span class="seriesInfo">DOI 10.1145/3517745.3561417</span>, <time datetime="2022-10" class="refDate">October 2022</time>, <span>&lt;<a href="https://doi.org/10.1145/3517745.3561417">https://doi.org/10.1145/3517745.3561417</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>
