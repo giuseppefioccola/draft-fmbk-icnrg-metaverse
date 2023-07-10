@@ -94,7 +94,7 @@ Table of Contents
    persistent eXtended Reality (XR).  Whereas initial prototypes and
    blueprints suggest leveraging or extending existing Internet and Web
    protocols, we can already identify gaps with respect to performance
-   and scalability, for example as reported by [socialAR-measurements].
+   and scalability, for example as reported by [socialVR-measurements].
 
    Some of the observed performance problems seem to stem from
    fundamental gaps in today's Internet and Web technologies, for
@@ -121,7 +121,7 @@ Table of Contents
    platform- and overlay-based system -- i.e., conceive the Metaverse
    and the future web as a fundamentally information-centric system.
 
-   This Internet draft addresses three aspects:
+   This document addresses three aspects:
 
    1.  the documentation of requirements and observed gaps with the
        current technology stack;
@@ -136,8 +136,9 @@ Table of Contents
 2.  Requirements and Gaps
 
    [I-D.han-iccrg-arvr-transport-problem] started to analyze the
-   requirements of VR and AR to networking from a transport protocol
-   perspective.  Some of the requirements are:
+   requirements of Virtual Reality (VR) and Augmented Reality (AR) to
+   networking from a transport protocol perspective.  Some of the
+   requirements are:
 
    *  low latency and High-Speed transport to reach services in one-hop
       and for real-time user interactions;
@@ -152,11 +153,11 @@ Table of Contents
    *  reducing data sizes through resolution changes, compression, and
       more efficient encodings.
 
-   [socialAR-measurements] performed measurements with five popular
+   [socialVR-measurements] performed measurements with five popular
    social VR platforms.  The experimental results revealed that all
    these platforms face fundamental technical challenges considering the
-   claims that often associated with the Metaverse.  One issue was poor
-   scalability with respect to the number of users in one session:
+   claims that are often associated with the Metaverse.  One issue was
+   poor scalability with respect to the number of users in one session:
    throughput, end-to-end latency, and on-device computation resource
    utilization increase almost linearly with the number of users.  Other
    issues include noticeable load and reduced achievable video rendering
@@ -168,11 +169,11 @@ Table of Contents
    Different IETF technologies have been proposed to address some of the
    above-mentioned issues and to provider a better service for Metaverse
    applications.  In the following, we list a few of them and will
-   discuss them in more detail in a future version of this Internet
-   Draft.  For example, on the network and transport layer, there are
-   elaborate solutions for dealing with bandwidth limitations, network
-   congestion, lossy transport protocols, and the ever growing size of
-   video data, to address the above requirements, for instance:
+   discuss them in more detail in a future version of this document.
+   For example, on the network and transport layer, there are elaborate
+   solutions for dealing with bandwidth limitations, network congestion,
+   lossy transport protocols, and the ever growing size of video data,
+   to address the above requirements, for instance:
 
    *  MPTCP[RFC8684] and MPQUIC[I-D.ietf-quic-multipath] are the
       expansions of TCP[RFC9293] and QUIC[RFC9000] in order to dispatch
@@ -307,7 +308,7 @@ Table of Contents
 
    *  Current trends: blending of real-time interactive (WebRTC with
       RTP) and streaming (DASH), for example: Amazon Twitch, Meta Rush,
-      IETF Media-over-QUIC, Cisco QuicR
+      IETF Media-over-QUIC, QuicR
 
    *  What is needed:
 
@@ -383,7 +384,7 @@ Table of Contents
    abstractions for systems.
 
    In Metaverse applications, data can potentially be shared efficiently
-   – between nodes and within one node/process.  Connection-based
+   between nodes and within one node/process.  Connection-based
    communication models make it hard/impossible to do so.
 
    Application layer data structures in VR (3D models, scene
@@ -423,7 +424,8 @@ Table of Contents
 
       -  Would there be any differences?
 
-      -  Do we need to think about robust namespace mappings schemes?
+      -  Would it be needed to think about robust namespace mappings
+         schemes?
 
    *  Concepts and mechanisms for privacy, selective attention, content
       filtering, and autonomous interactions, as well as ownership and
@@ -526,9 +528,9 @@ Table of Contents
               Gruessing, J. and S. Dawkins, "Media Over QUIC - Use Cases
               and Requirements for Media Transport Protocol Design",
               Work in Progress, Internet-Draft, draft-ietf-moq-
-              requirements-00, 5 June 2023,
+              requirements-01, 10 July 2023,
               <https://datatracker.ietf.org/doc/html/draft-ietf-moq-
-              requirements-00>.
+              requirements-01>.
 
    [I-D.ietf-quic-multipath]
               Liu, Y., Ma, Y., De Coninck, Q., Bonaventure, O., Huitema,
@@ -585,7 +587,7 @@ Table of Contents
               STD 7, RFC 9293, DOI 10.17487/RFC9293, August 2022,
               <https://www.rfc-editor.org/rfc/rfc9293>.
 
-   [socialAR-measurements]
+   [socialVR-measurements]
               Cheng, R., Wu, N., Varvello, M., Chen, S., and B. Han,
               "Are we ready for metaverse?: a measurement study of
               social virtual reality platforms", Proceedings of the 22nd
