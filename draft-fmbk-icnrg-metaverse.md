@@ -313,6 +313,7 @@ ICN is generally supporting most of these requirements:
 * Receiver-driven operation conducive to supporting different quality
   levels, like in DASH today: receiver has all the knowledge directly
   (current performance) and can make timely decisions.
+* Object synchronization protocols for exchanging collections of objects. 
 * ICN approaches enable local and intermittently connected name-based behavior more easier, as they do not rely on infrastructure for many name-based operations. <!--JB: refine-->
 * Consumer mobility is an efficient operation in ICN (a non-operation).
 
@@ -354,7 +355,7 @@ communication models make it hard/impossible to do so.
 
 Application layer data structures in VR (3D models, scene
 descriptions) are based on (and should be secured within) object hierarchies, connection-based
-systems may not be able to take advantage of it.
+systems may not be able to take advantage of it.  Building such applications on top of connection-oriented schemes increases complexity and increases the effort required for interoperability. 
 
 ### ICN Support
 
@@ -381,13 +382,14 @@ less relevant. In addition ICN provides
 * Concepts for dealing with "mutable objects" (or mutable
   "information") should be developed, i.e., how to deal with updates
   without giving up data immutability.
-* The relationship between application-layer data-oriented operation
+* The relationships among application-layer data-oriented operation
   and network-layer needs to be explored further, e.g.,
   * Would there be any differences?
   * Would it be needed to think about robust namespace mappings schemes?
 * Concepts and mechanisms for privacy, selective attention, content
   filtering, and autonomous interactions, as well as ownership and
   control on the publishing side are needed.
+* Interoperability opportunities enhanced when connection- and host-management layers can be eliminated.  
 * In general more applications should be developed to enable more experiments.
 
 ## In-Network Computing
