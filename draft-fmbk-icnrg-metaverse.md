@@ -87,7 +87,7 @@ definitions is the notion of shared, interoperable, and
 persistent eXtended Reality (XR). Whereas most initial prototypes and
 blueprints suggest leveraging or extending existing Internet and Web
 protocols, there are performance
-and scalability gaps between the vision and current technology, 
+and scalability gaps between the vision and current technology,
 for example as reported by {{socialVR-measurements}}.
 
 Some of the observed performance problems seem to stem from
@@ -96,7 +96,7 @@ the lack of scalable and robust multi-destination
 communication, but have limited utility for bidirectional, low-latency interaction.    The ability to leverage computing in the network with
 the required level of flexibility and trustworthiness is critical to
 offloading services and enabling the ultra-low latencies that some
-Metaverse applications claim to require, but challenging in the current architecture. Finally, the host- and connection-based semantics of IP are conceptually misaligned with the view from "inside" metaverse applications, where computing devices have little reason to be visible unless explicitly required by the application. 
+Metaverse applications claim to require, but challenging in the current architecture. Finally, the host- and connection-based semantics of IP are conceptually misaligned with the view from "inside" metaverse applications, where computing devices have little reason to be visible unless explicitly required by the application.
 
 Different remedies are being proposed to meet some of these challenges, e.g., providing more (costly)
 deterministic communication services through resource reservation and
@@ -138,7 +138,7 @@ Some of the requirements are:
 * intelligent control and SLA real-time monitoring to convey the traffic and manage
   network resources and source/route re-selection;
 * decentralization and Edge Services by positioning the data close to the user;
-* security models implemented at the data object level;  
+* security models implemented at the data object level;
 * effective operation when access to infrastructure is limited or unavailable; <!-- JB: I added this as it is a limitation to the current web that gets exacerbated in Metaverse applications, and has significant implications for disaster resilience, mobile/vehicular networking, etc. --> and
 * reducing data sizes through resolution changes, compression, and
   more efficient encodings. <!-- Just-in-time content delivery decisions -->
@@ -155,7 +155,7 @@ frame rates and considerable network utilization even with smaller
 numbers of users.
 
 <!--The following paragraph is not quite right, but I think this type of point needs to be made as well, to really explain the benefits of rethinking the next generation web. -->
-While it is less easily quantified, the impacts of network architecture complexity and resulting deployment expense on the difficulty of authoring (and collaborative editing) of next generation content that mixes media and code must also be taken into account.  Iteratively creating and publishing an interactive 3D application that performs well on the global internet, works offline, and is reasonably secure is a challenging task, which limits innovation and appears to drive prospective creators towards a small number of centralized platforms and services that homogenize features to the detriment of application variety. 
+While it is less easily quantified, the impacts of network architecture complexity and resulting deployment expense on the difficulty of authoring (and collaborative editing) of next generation content that mixes media and code must also be taken into account.  Iteratively creating and publishing an interactive 3D application that performs well on the global internet, works offline, and is reasonably secure is a challenging task, which limits innovation and appears to drive prospective creators towards a small number of centralized platforms and services that homogenize features to the detriment of application variety.
 
 
 # Current and Emerging Mainstream Approaches
@@ -233,7 +233,7 @@ We cannot review the technical specification, but the feature
 description seems to suggest an application layer protocol that would
 enable more expressiveness and functionality in the "web" (i.e.,
 application and presentation) layer, however based on the assumption
-of existing networking technology and overlay approaches. 
+of existing networking technology and overlay approaches.
 
 
 # Opportunities and Challenges for Information-Centric Metaverse
@@ -243,10 +243,10 @@ proposed application layer protocols, we can reason about a holistic
 design that can address the aforementioned problems *and* provide a
 more useful foundations for future hypermedia communication.
 
-Information-Centric Networking (ICN) introduces named information objects, 
+Information-Centric Networking (ICN) introduces named information objects,
 e.g. media contents, as the central concept as opposed to a physical computer,
 or node ({{?RFC7927}}). In ICN approaches, the principal paradigm is not
-host-to-host communication as in the current Internet architecture. Security is intrinsic to the data objects, rather than the channels that carry them, and secured data is forwaded based on names. 
+host-to-host communication as in the current Internet architecture. Security is intrinsic to the data objects, rather than the channels that carry them, and secured data is forwaded based on names.
 The increasing demand for highly scalable and efficient distribution of content
 has motivated the development of architectures that focus on information objects,
 their properties, and receiver interest in the network to achieve efficient and
@@ -257,7 +257,7 @@ system where most applications participate in granular 3D content
 exchange, context-aware integration with the physical world, and other
 Metaverse-relevant services.  There is strong semantic alignment between the network architecture and the application domain, in this case: We argue that the Metaverse is
 inherently an information-centric concept that will become synonymous with the
-network itself.  
+network itself.
 
 Many applications and application concepts already work with data-oriented paradigms. Mapping them to a
 host-centric network model creates complexity, security, and robustness issues, which can
@@ -267,7 +267,7 @@ The overlay approach to deal with real-time interactive media adds significant
 complexity. It is needed a fine-grained, hierarchical media exchange for low-latency
 interactive communication that enables scalable multi-destination distribution,
 and in-network replication and transformation that exposes object hierarchy for
-fine grained access and security.  Mapping security between application data objects that are manipulated in a virtual environment independently of where they are stored requires a data-centric security paradigm even in the current network.  
+fine grained access and security.  Mapping security between application data objects that are manipulated in a virtual environment independently of where they are stored requires a data-centric security paradigm even in the current network.
 
 Additionally, we propose that the Metaverse is an extension of the Web into immersive XR modalities
 that are often aligned with physical space,  <!--Not sure about introducing physical space here, as we don't use it in the next point. Maybe a second point --> leveraging ICN concepts provides
@@ -294,11 +294,11 @@ ICN community for four topics:
 * What is needed:
   * fine-granular media distribution that supports both interactive and streaming;
   * scalable multi-destination distribution, i.e., some kind of in-network replication;
-  * ability to leverage wireless broadcast such as 5G Broadcast; 
+  * ability to leverage wireless broadcast such as 5G Broadcast;
   * approaches that function under limited connectivity and disconnected operation; and
   * support for hetergeneous devices and edge networks, i.e.,
     different quality layers, possibly dynamic transcoding.
-	
+
 ### ICN Support
 
 ICN is generally supporting most of these requirements:
@@ -364,8 +364,8 @@ less relevant. In addition ICN provides
 
 * name-based APIs to applications;
 * support for object collections through manifests;
-* security models that revolve around objects rather than hosts; 
-* reduced "hidden complexity" in infrastructure, such as cloud services configuration to support a specific applicaiton; 
+* security models that revolve around objects rather than hosts;
+* reduced "hidden complexity" in infrastructure, such as cloud services configuration to support a specific applicaiton;
 * additional "middleware" such as dataset synchronization; and
 * data-sharing is generally supported, which has benefits beyond
   networking, e.g., zero-copy sharing in processes etc.
@@ -375,7 +375,7 @@ less relevant. In addition ICN provides
 * Work should be expanded on the development of information-centric
   hypermedia concepts, i.e., linking from object collections to other
   objects/collections.
-* Mappings between data-centric network objects and current hierarchical formats being considered as standards for Metaverse applications, such as USD <!--ref--> and glTF <!--ref--> should be explored. 
+* Mappings between data-centric network objects and current hierarchical formats being considered as standards for Metaverse applications, such as USD <!--ref--> and glTF <!--ref--> should be explored.
 * Manifest technologies such as FLIC should be extended to support
   dynamically created objects.
 * Concepts for dealing with "mutable objects" (or mutable
@@ -416,7 +416,7 @@ In-network computing can support Metaverse systems in different ways:
 * The named-data approach is generally useful for distributed computing (NFN,
   RICE, CFN).
 * ICN's security model makes it possible to do on-path computing / data transformation securely
-* better performance under limited connectivity or disconnected operation; 
+* better performance under limited connectivity or disconnected operation;
 * discovery of functions and request forwarding can be punted on
   regular ICN mechanisms (name-based forwarding).
 
