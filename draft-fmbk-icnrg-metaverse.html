@@ -14,24 +14,23 @@
 brought by the development of Metaverse.
 It discusses the Metaverse as an Information-Centric Network (ICN). 
     " name="description">
-<meta content="xml2rfc 3.17.4" name="generator">
+<meta content="xml2rfc 3.27.0" name="generator">
 <meta content="Internet-Draft" name="keyword">
 <meta content="draft-fmbk-icnrg-metaverse-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.17.4
-    Python 3.11.4
-    ConfigArgParse 1.5.3
-    google-i18n-address 3.1.0
+  xml2rfc 3.27.0
+    Python 3.12.9
+    ConfigArgParse 1.7
+    google-i18n-address 3.1.1
     intervaltree 3.1.0
-    Jinja2 3.1.2
-    lxml 4.9.2
-    platformdirs 3.8.0
-    pycountry 22.3.5
-    PyYAML 6.0
-    requests 2.31.0
-    setuptools 67.7.2
-    six 1.16.0
-    wcwidth 0.2.6
+    Jinja2 3.1.5
+    lxml 5.3.0
+    platformdirs 4.3.6
+    pycountry 24.6.1
+    PyYAML 6.0.2
+    requests 2.32.3
+    setuptools 70.3.0
+    wcwidth 0.2.13
 -->
 <link href="draft-fmbk-icnrg-metaverse.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -167,31 +166,6 @@ It discusses the Metaverse as an Information-Centric Network (ICN).
 }
 
 @font-face {
-  font-family: 'Cabin Condensed';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: local('Cabin Condensed SemiBold'), local('CabinCondensed-SemiBold'), url('https://martinthomson.github.io/rfc-css/fonts/cabincondensed-semibold-vietnamese.woff2') format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
-}
-@font-face {
-  font-family: 'Cabin Condensed';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: local('Cabin Condensed SemiBold'), local('CabinCondensed-SemiBold'), url('https://martinthomson.github.io/rfc-css/fonts/cabincondensed-semibold-latin-ext.woff2') format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: 'Cabin Condensed';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: local('Cabin Condensed SemiBold'), local('CabinCondensed-SemiBold'), url('https://martinthomson.github.io/rfc-css/fonts/cabincondensed-semibold-latin.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
   font-family: 'Oxygen Mono';
   font-style: normal;
   font-weight: 400;
@@ -208,6 +182,77 @@ It discusses the Metaverse as an Information-Centric Network (ICN).
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: italic;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-italic-cyrillic-ext.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: italic;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-italic-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: italic;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-italic-greek.woff2') format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: italic;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-italic-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: italic;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-italic-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: normal;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-regular-cyrillic-ext.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: normal;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-regular-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: normal;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-regular-greek.woff2') format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: normal;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-regular-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Sofia Sans Semi Condensed';
+  font-style: normal;
+  font-weight: 1 1000;
+  src: url('https://martinthomson.github.io/rfc-css/fonts/sofiasanssemicondensed-regular-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
   color-scheme: light dark;
   --background-color: #fff;
@@ -220,6 +265,7 @@ It discusses the Metaverse as an Information-Centric Network (ICN).
   --pilcrow-strong: #bbb;
   --small-font-size: 14.5px;
   --font-mono: 'Oxygen Mono', monospace;
+  --font-title: "Sofia Sans Semi Condensed", sans-serif;
   scrollbar-color: #bbb #eee;
 }
 body {
@@ -237,9 +283,15 @@ body {
 }
 
 /* headings */
+section {
+  clear: both;
+}
+.section-number {
+  padding-right: 0.5em;
+}
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Cabin Condensed", sans-serif;
-  font-weight: 600;
+  font-family: var(--font-title);
+  font-weight: 680;
   margin: 0.8em 0 0.3em;
   font-size-adjust: 0.5;
   color: var(--title-color);
@@ -268,6 +320,7 @@ h4, h5, h6 {
 /* general structure */
 .author {
   padding-bottom: 0.3em;
+  vertical-align: top;
 }
 #abstract+p {
   font-size: 18px;
@@ -345,25 +398,26 @@ svg[font-family~="monospace" i], svg [font-family~="monospace" i] {
 ol, ul {
   padding: 0;
   margin: 0 0 0.5em 2em;
-}
-:is(ol, ul) :is(ol, ul) {
-  margin-left: 1em;
+  & :is(ol, ul) {
+    margin-left: 1em;
+  }
 }
 li {
   margin: 0 0 0.25em 0;
 }
-.ulCompact li {
-  margin: 0;
-}
 ul.empty, .ulEmpty {
   list-style-type: none;
-}
-ul.empty li, .ulEmpty li {
-  margin-top: 0.5em;
+  & li {
+    margin-top: 0.5em;
+  }
 }
 :is(ul, ol).compact, .ulCompact, .olCompact {
-  line-height: 1;
   margin: 0 0 0 2em;
+  & li {
+    margin: 0;
+    & :first-child { margin-top: 0; }
+    & :last-child { margin-bottom: 0; }
+  }
 }
 
 /* definition lists */
@@ -371,38 +425,39 @@ dl {
   clear: left;
   --indent: 3ch;
   /* --indent: attr(indent ch); not supported in any browser, but we can dream */
+  &.olPercent {
+    --indent: 5ch;
+    & > dt {
+      min-width: calc(var(--indent) - 2ch);
+    }
+  }
+  &.olPercent > dt {
+    float: none;
+  }
+
+  dl > dd > & {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+  }
 }
-dl.olPercent {
-  --indent: 5ch;
-}
-dl > dt {
+dl:not(.dlNewline) > dt {
   float: left;
   margin-right: 2ch;
   min-width: 8ch;
-}
-dl.dlNewline > dt {
-  float: none;
 }
 dl > dd {
   margin-bottom: .8em;
   margin-left: var(--indent) !important; /* stupid element overrides */
   min-height: 2ex;
 }
-dl.olPercent > dt {
-  min-width: calc(var(--indent) - 2ch);
-}
 :is(dl.compact, .dlCompact) > dd {
   margin-bottom: 0;
-}
-:is(dl.compact, .dlCompact) > dd > :is(:first-child, .break:first-child + *) {
-  margin-top: 0;
-}
-:is(dl.compact, .dlCompact) > dd > :is(:last-child) {
-  margin-bottom: 0;
-}
-dl > dd > dl {
-  margin-top: 0.5em;
-  margin-bottom: 0;
+  & > :is(:first-child, .break:first-child + *) {
+    margin-top: 0;
+  }
+  & > :is(:last-child) {
+    margin-bottom: 0;
+  }
 }
 :is(dd, span).break {
   display: none;
@@ -466,6 +521,7 @@ figcaption, caption {
   font-style: italic;
   margin: 0.5em 1.5em;
   text-align: left;
+  caption-side: bottom;
 }
 @media screen {
   /* Auto-collapse boilerplate. */
@@ -483,7 +539,11 @@ figcaption, caption {
   }
   pre, svg {
     display: inline-block;
-    overflow-x: auto;
+    /* In the horizontal direction, sometimes people make over-sized figures.
+       Scrollbars for those is therefore necessary: auto adds them as necessary..
+       In the vertical direction, the line-height can combine with the font
+       asender/descender height to produce scrollbars: hidden avoids that. */
+    overflow: auto hidden;
   }
   pre {
     max-width: 100%;
@@ -520,6 +580,7 @@ cite {
 
 /* tables */
 table {
+  width: auto;
   max-width: 100%;
   margin: 0 0 1em;
   border-collapse: collapse;
@@ -534,6 +595,16 @@ table.center {
 table.left {
   margin-right: auto;
 }
+table .text-left {
+  text-align: left;
+}
+table .text-center {
+  text-align: center;
+}
+table .text-right {
+  text-align: right;
+}
+
 thead, tbody {
   border: 1px solid var(--line-color);
 }
@@ -564,9 +635,11 @@ a.pilcrow {
   margin-left: 3px;
   opacity: 0.2;
   user-select: none;
+  &[href] {
+    color: var(--pilcrow-weak);
+    &:hover { text-decoration: none; }
+  }
 }
-a.pilcrow[href] { color: var(--pilcrow-weak); }
-a.pilcrow[href]:hover { text-decoration: none; }
 @media not print {
   :hover > a.pilcrow {
     opacity: 1;
@@ -606,26 +679,28 @@ sub, sup {
   font-size: var(--small-font-size);
   line-height: 18px;
   --identifier-width: 15ch;
-}
-#identifiers dt {
-  width: var(--identifier-width);
-  min-width: var(--identifier-width);
-  clear: left;
-  float: left;
-  text-align: right;
-  margin-right: 1ch;
-}
-#identifiers dd {
-  margin: 0;
-  margin-left: calc(1em + var(--identifier-width)) !important;
-  min-width: 5em;
-}
-#identifiers .authors .author {
-  display: inline-block;
-  margin-right: 1.5em;
-}
-#identifiers .authors .org {
-  font-style: italic;
+  & dt {
+    width: var(--identifier-width);
+    min-width: var(--identifier-width);
+    clear: left;
+    float: left;
+    text-align: right;
+    margin-right: 1ch;
+  }
+  & dd {
+    margin: 0;
+    margin-left: calc(1em + var(--identifier-width)) !important;
+    min-width: 5em;
+  }
+  & .authors {
+    & .author {
+      display: inline-block;
+      margin-right: 1.5em;
+    }
+    & .org {
+      font-style: italic;
+    }
+  }
 }
 
 /* The prepared/rendered info at the very bottom of the page */
@@ -636,9 +711,6 @@ sub, sup {
   margin-top: 2em;
 }
 .docInfo .prepared {
-  float: left;
-}
-.docInfo .prepared {
   float: right;
 }
 
@@ -646,47 +718,48 @@ sub, sup {
 #toc {
   padding: 0.75em 0 2em 0;
   margin-bottom: 1em;
-}
-#toc nav ul {
-  margin: 0 0.5em 0 0;
-  padding: 0;
-  list-style: none;
-}
-#toc nav li {
-  line-height: 1.3em;
-  margin: 0.75em 0;
-  padding-left: 1.2em;
-  text-indent: -1.2em;
-}
-#toc a.xref {
-  white-space: normal;
-}
-/* references */
-.references dt {
-  text-align: right;
-  font-weight: bold;
-  min-width: 10ch;
-  margin-right: 1.5ch;
-}
-.references dt:target::before {
-  content: "⇒";
-  width: 15px;
-  margin: 0 10px 0 -25px;
-}
-.references dd {
-  margin-left: 12ch !important;
-  overflow: auto;
+
+  & nav {
+    & ul {
+      margin: 0 0.5em 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    & li {
+      line-height: 1.3em;
+      margin: 2px 0;
+      padding-left: 1.2em;
+      text-indent: -1.2em;
+    }
+  }
+  & a.xref {
+    white-space: normal;
+  }
 }
 
-.refInstance {
-  margin-bottom: 1.25em;
+.references {
+  & > dt {
+    text-align: right;
+    font-weight: bold;
+    min-width: 10ch;
+    margin-right: 1.5ch;
+    &:target::before {
+      content: "⇒";
+      margin: 0 10px 0 -25px;
+    }
+  }
+  & > dd {
+    margin-left: 12ch !important;
+    overflow: visible;
+    & .refInstance {
+      margin-bottom: 0.8em;
+    }
+    & .ascii {
+      margin-bottom: 0.25em;
+    }
+  }
 }
 
-.references .ascii {
-  margin-bottom: 0.25em;
-}
-
-/* index */
 #rfc\.index\.index + ul {
   margin-left: 0;
 }
@@ -694,21 +767,33 @@ sub, sup {
 /* authors */
 address.vcard {
   font-style: normal;
-  margin: 1em 0;
+  max-width: 20em;
+  margin: 1em auto 1em 0;
+
+  & .nameRole {
+    font-weight: 700;
+    margin-left: 0;
+  }
+  & .label {
+    margin: 0.5em 0;
+  }
+  & .type {
+    display: none;
+  }
+  & .alternative-contact {
+    margin: 0.5em 0 0.25em 0;
+  }
+  & .non-ascii {
+    margin: 0 0 0 2em;
+  }
+  & div.left {
+    text-align: left;
+  }
+  & div.right {
+    text-align: right;
+  }
 }
-address.vcard .nameRole {
-  font-weight: 700;
-  margin-left: 0;
-}
-address.vcard .label {
-  margin: 0.5em 0;
-}
-address.vcard .type {
-  display: none;
-}
-.alternative-contact {
-  margin: 1.5em 0 1em;
-}
+
 hr.addr {
   border-top: 1px dashed;
   margin: 0;
@@ -730,6 +815,7 @@ hr.addr {
   }
 }
 
+/* Comments */
 .rfcEditorRemove p:first-of-type {
   font-style: italic;
 }
@@ -740,20 +826,41 @@ hr.addr {
 .crefSource {
   font-style: italic;
 }
-/* alternative layout for smaller screens */
+
+@media screen {
+  #toc nav {
+    font-family: var(--font-title);
+    font-weight: 360;
+    & > ul { margin-bottom: 2em; }
+    & ul {
+      margin: 0 0 0 4px;
+      & :is(p, li) {
+        margin: 2px 0;
+      }
+    }
+  }
+  #toc a.toplink {
+    float: right;
+  }
+}
+@media not screen {
+  #toc a.toplink {
+    display: none;
+  }
+}
+
+
+/* TOC layout for smaller screens */
 @media screen and (max-width: 929px) {
   #toc {
     position: fixed;
     z-index: 2;
     top: 0;
     right: 0;
-    padding: 0;
+    padding: 1px 0 0 0;
     margin: 0;
     border-bottom: 1px solid #ccc;
     opacity: 0.6;
-  }
-  #toc.active {
-      opacity: 1;
   }
   #toc h2 {
     margin: 0;
@@ -766,17 +873,17 @@ hr.addr {
     background-color: #444;
     color: white;
     cursor: pointer;
-  }
-  #toc h2::before { /* css hamburger */
-    float: right;
-    position: relative;
-    width: 1em;
-    height: 1px;
-    left: -164px;
-    margin: 8px 0 0 0;
-    background: white none repeat scroll 0 0;
-    box-shadow: 0 4px 0 0 white, 0 8px 0 0 white;
-    content: "";
+    &::before { /* css hamburger */
+      float: right;
+      position: relative;
+      width: 1em;
+      height: 1px;
+      left: -164px;
+      margin: 8px 0 0 0;
+      background: white none repeat scroll 0 0;
+      box-shadow: 0 4px 0 0 white, 0 8px 0 0 white;
+      content: "";
+    }
   }
   #toc nav {
     display: none;
@@ -787,14 +894,13 @@ hr.addr {
     height: calc(100vh - 48px);
     border-left: 1px solid #ddd;
   }
-  #toc.active nav {
-    display: block;
+  #toc.active {
+    opacity: 1;
+    & nav { display: block; }
   }
   /* Make the collapsed ToC header render white on gray also when it's a link */
   #toc h2 a,
-  #toc h2 a:link,
-  #toc h2 a:focus,
-  #toc h2 a:hover,
+  #toc h2 a:is(:link, :focus, :hover),
   #toc a.toplink,
   #toc a.toplink:hover {
     color: white;
@@ -802,11 +908,11 @@ hr.addr {
     text-decoration: none;
   }
   #toc a.toplink {
-    margin-top: 2px;
+    margin: 2px 0.5em 0;
   }
 }
 
-/* alternative layout for wide screens */
+/* TOC layout for wide screens */
 @media screen and (min-width: 930px) {
   body {
     padding-right: 360px;
@@ -835,20 +941,12 @@ hr.addr {
     overscroll-behavior: contain;
     scrollbar-width: thin;
   }
-  #toc nav > ul  {
-    margin-bottom: 2em;
-  }
-  #toc ul {
-    margin: 0 0 0 4px;
-    font-size: var(--small-font-size);
-  }
-  #toc ul :is(p, li) {
-    margin: 2px 0;
-    line-height: 22px;
-  }
   img { /* future proofing */
     max-width: 100%;
     height: auto;
+  }
+  #toc a.toplink {
+    margin: 8px 0.5em 0;
   }
 }
 
@@ -871,16 +969,13 @@ hr.addr {
     border-top: none;
     padding-top: 0;
   }
-  figure, pre {
+  figure, pre, .vcard {
     page-break-inside: avoid;
-  }
-  figure {
-    overflow: scroll;
   }
   h1, h2, h3, h4, h5, h6 {
     page-break-after: avoid;
   }
-  h2+*, h3+*, h4+*, h5+*, h6+* {
+  :is(h2, h3, h4, h5, h6)+*, dd {
     page-break-before: avoid;
   }
   pre {
@@ -916,104 +1011,6 @@ hr.addr {
   size: A4;
   margin-bottom: 45mm;
   padding-top: 20px;
-}
-
-/* Changes introduced to fix issues found during implementation */
-
-/* Separate body from document info even without intervening H1 */
-section {
-  clear: both;
-}
-
-/* Top align author divs, to avoid names without organization dropping level with org names */
-.author {
-  vertical-align: top;
-}
-
-/* Style section numbers with more space between number and title */
-.section-number {
-  padding-right: 0.5em;
-}
-
-/* Add styling for a link in the ToC that points to the top of the document */
-a.toplink {
-  float: right;
-  margin: 8px 0.5em 0;
-}
-
-/* Provide styling for table cell text alignment */
-table .text-left {
-  text-align: left;
-}
-table .text-center {
-  text-align: center;
-}
-table .text-right {
-  text-align: right;
-}
-
-/* Make the alternative author contact information look less like just another
-   author, and group it closer with the primary author contact information */
-.alternative-contact {
-  margin: 0.5em 0 0.25em 0;
-}
-address .non-ascii {
-  margin: 0 0 0 2em;
-}
-
-/* With it being possible to set tables with alignment
-  left, center, and right, { width: 100%; } does not make sense */
-table {
-  width: auto;
-}
-
-/* Avoid reference text that sits in a block with very wide left margin,
-   because of a long floating dt label.*/
-.references dd {
-  overflow: visible;
-}
-
-/* Control caption placement */
-caption {
-  caption-side: bottom;
-}
-
-/* Limit the width of the author address vcard, so names in right-to-left
-   script don't end up on the other side of the page. */
-
-address.vcard {
-  max-width: 20em;
-  margin-right: auto;
-}
-
-/* For address alignment dependent on LTR or RTL scripts */
-address div.left {
-  text-align: left;
-}
-address div.right {
-  text-align: right;
-}
-
-/* Give the table caption label the same styling as the figcaption */
-
-@media print {
-  .toplink {
-    display: none;
-  }
-
-  /* avoid overwriting the top border line with the ToC header */
-  #toc {
-    padding-top: 1px;
-  }
-
-  /* Avoid page breaks inside dl and author address entries */
-  dd {
-    page-break-before: avoid;
-  }
-  .vcard {
-    page-break-inside: avoid;
-  }
-
 }
 
 /* Dark mode. */
@@ -1052,11 +1049,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">Metaverse</td>
-<td class="right">July 2023</td>
+<td class="right">February 2025</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Fioccola, et al.</td>
-<td class="center">Expires 11 January 2024</td>
+<td class="center">Expires 28 August 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1069,12 +1066,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-fmbk-icnrg-metaverse-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2023-07-10" class="published">10 July 2023</time>
+<time datetime="2025-02-24" class="published">24 February 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2024-01-11">11 January 2024</time></dd>
+<dd class="expires"><time datetime="2025-08-28">28 August 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1130,7 +1127,7 @@ It discusses the Metaverse as an Information-Centric Network (ICN).<a href="#sec
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 11 January 2024.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 28 August 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1139,7 +1136,7 @@ It discusses the Metaverse as an Information-Centric Network (ICN).<a href="#sec
 <a href="#name-copyright-notice" class="section-name selfRef">Copyright Notice</a>
         </h2>
 <p id="section-boilerplate.2-1">
-            Copyright (c) 2023 IETF Trust and the persons identified as the
+            Copyright (c) 2025 IETF Trust and the persons identified as the
             document authors. All rights reserved.<a href="#section-boilerplate.2-1" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.2-2">
             This document is subject to BCP 78 and the IETF Trust's Legal
@@ -1276,15 +1273,18 @@ platform- and overlay-based system -- i.e., conceive the Metaverse and
 the future web as a fundamentally information-centric system.<a href="#section-1-4" class="pilcrow">¶</a></p>
 <p id="section-1-5">This document addresses three aspects:<a href="#section-1-5" class="pilcrow">¶</a></p>
 <ol start="1" type="1" class="normal type-1" id="section-1-6">
-<li id="section-1-6.1">the documentation of requirements and observed gaps with the current
-technology stack;<a href="#section-1-6.1" class="pilcrow">¶</a>
+<li id="section-1-6.1">
+          <p id="section-1-6.1.1">the documentation of requirements and observed gaps with the current
+technology stack;<a href="#section-1-6.1.1" class="pilcrow">¶</a></p>
 </li>
-        <li id="section-1-6.2">a discussion of the applicability of different networking and
-distributed computing technologies; and<a href="#section-1-6.2" class="pilcrow">¶</a>
+        <li id="section-1-6.2">
+          <p id="section-1-6.2.1">a discussion of the applicability of different networking and
+distributed computing technologies; and<a href="#section-1-6.2.1" class="pilcrow">¶</a></p>
 </li>
-        <li id="section-1-6.3">an initial discussion of a more fundamental and comprehensive
+        <li id="section-1-6.3">
+          <p id="section-1-6.3.1">an initial discussion of a more fundamental and comprehensive
 re-design of a future web that provides useful services for
-Metaverse systems and beyond.<a href="#section-1-6.3" class="pilcrow">¶</a>
+Metaverse systems and beyond.<a href="#section-1-6.3.1" class="pilcrow">¶</a></p>
 </li>
       </ol>
 </section>
@@ -1299,16 +1299,20 @@ of Virtual Reality (VR) and Augmented Reality (AR) to networking from a
 transport protocol perspective.
 Some of the requirements are:<a href="#section-2-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-2-2.1">low latency and High-Speed transport to reach services in one-hop
-and for real-time user interactions;<a href="#section-2-2.1" class="pilcrow">¶</a>
+<li class="normal" id="section-2-2.1">
+          <p id="section-2-2.1.1">low latency and High-Speed transport to reach services in one-hop
+and for real-time user interactions;<a href="#section-2-2.1.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-2.2">intelligent control and SLA real-time monitoring to convey the traffic and manage
-network resources and source/route re-selection;<a href="#section-2-2.2" class="pilcrow">¶</a>
+        <li class="normal" id="section-2-2.2">
+          <p id="section-2-2.2.1">intelligent control and SLA real-time monitoring to convey the traffic and manage
+network resources and source/route re-selection;<a href="#section-2-2.2.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-2.3">decentralization and Edge Services by positioning the data close to the user; and<a href="#section-2-2.3" class="pilcrow">¶</a>
+        <li class="normal" id="section-2-2.3">
+          <p id="section-2-2.3.1">decentralization and Edge Services by positioning the data close to the user; and<a href="#section-2-2.3.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-2-2.4">reducing data sizes through resolution changes, compression, and
-more efficient encodings.<a href="#section-2-2.4" class="pilcrow">¶</a>
+        <li class="normal" id="section-2-2.4">
+          <p id="section-2-2.4.1">reducing data sizes through resolution changes, compression, and
+more efficient encodings.<a href="#section-2-2.4.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <p id="section-2-3"><span>[<a href="#socialVR-measurements" class="cite xref">socialVR-measurements</a>]</span> performed measurements with five popular
@@ -1337,38 +1341,43 @@ for dealing with bandwidth limitations, network congestion, lossy transport
 protocols, and the ever growing size of video data, to address
 the above requirements, for instance:<a href="#section-3-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-3-2.1">MPTCP<span>[<a href="#RFC8684" class="cite xref">RFC8684</a>]</span> and MPQUIC<span>[<a href="#I-D.ietf-quic-multipath" class="cite xref">I-D.ietf-quic-multipath</a>]</span> are the
+<li class="normal" id="section-3-2.1">
+          <p id="section-3-2.1.1">MPTCP<span>[<a href="#RFC8684" class="cite xref">RFC8684</a>]</span> and MPQUIC<span>[<a href="#I-D.ietf-quic-multipath" class="cite xref">I-D.ietf-quic-multipath</a>]</span> are the
 expansions of TCP<span>[<a href="#RFC9293" class="cite xref">RFC9293</a>]</span> and QUIC<span>[<a href="#RFC9000" class="cite xref">RFC9000</a>]</span> in order to
-dispatch packets over multiple paths to maximize throughput.<a href="#section-3-2.1" class="pilcrow">¶</a>
+dispatch packets over multiple paths to maximize throughput.<a href="#section-3-2.1.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-3-2.2">Dynamic Adaptive Streaming over HTTP (DASH) aim to improve the
+        <li class="normal" id="section-3-2.2">
+          <p id="section-3-2.2.1">Dynamic Adaptive Streaming over HTTP (DASH) aim to improve the
 viewport quality of immersive videos by refining the tiles
 delivery. But client-driven nature of DASH introduces less control
-on the server side.<a href="#section-3-2.2" class="pilcrow">¶</a>
+on the server side.<a href="#section-3-2.2.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-3-2.3">Media over QUIC (MoQ) (<span>[<a href="#I-D.ietf-moq-requirements" class="cite xref">I-D.ietf-moq-requirements</a>]</span>) and
+        <li class="normal" id="section-3-2.3">
+          <p id="section-3-2.3.1">Media over QUIC (MoQ) (<span>[<a href="#I-D.ietf-moq-requirements" class="cite xref">I-D.ietf-moq-requirements</a>]</span>) and
 extensions such as QuicR (<span>[<a href="#I-D.jennings-moq-proto" class="cite xref">I-D.jennings-moq-proto</a>]</span>) use similar
 concepts and delivery mechanisms to those used by CDN and named
 objects.  There are fundamental characteristics that QuicR provides
 for ultra low latency delivery, by leveraging the characteristics of
-QUIC protocol.<a href="#section-3-2.3" class="pilcrow">¶</a>
+QUIC protocol.<a href="#section-3-2.3.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-3-2.4">The APplication-aware Networking (APN) aims to develop a framework
+        <li class="normal" id="section-3-2.4">
+          <p id="section-3-2.4.1">The APplication-aware Networking (APN) aims to develop a framework
 to enable fine-granularity network service provisioning (traffic
 operations) within the network domain(s) that supports APN
 (<span>[<a href="#I-D.li-apn-framework" class="cite xref">I-D.li-apn-framework</a>]</span>). APN aims to use the ability to apply
 policies to traffic flows entering into the infrastructure.  In
 modern networks, where things such as deterministic networking and
 networking slicing are required, there is a requirement for more
-functionality than QoS can provide.<a href="#section-3-2.4" class="pilcrow">¶</a>
+functionality than QoS can provide.<a href="#section-3-2.4.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-3-2.5">The Computing-Aware Traffic Steering (CATS) aims to analyze the
+        <li class="normal" id="section-3-2.5">
+          <p id="section-3-2.5.1">The Computing-Aware Traffic Steering (CATS) aims to analyze the
 problem on the edge node, which makes a decision based on the
 metrics of interest, and then steers the traffic to a node that
 serves a service instance. Indeed, for AR/VR services, the
 performance experienced by the end users depends on both network
 metrics such as bandwidth and latency, and compute metrics such as
-processing, storage capabilities, and capacity.<a href="#section-3-2.5" class="pilcrow">¶</a>
+processing, storage capabilities, and capacity.<a href="#section-3-2.5.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <p id="section-3-3">In all of these approaches, the Metaverse is considered as an overlay
@@ -1385,20 +1394,24 @@ platforms, applications, artificial intelligence systems)". The
 specification, which is not accessible publically, is supposed to
 include<a href="#section-3-4" class="pilcrow">¶</a></p>
 <ol start="1" type="1" class="normal type-1" id="section-3-5">
-<li id="section-3-5.1">a spatial range query format and response
+<li id="section-3-5.1">
+          <p id="section-3-5.1.1">a spatial range query format and response
 language for requesting data about objects within a dimensional range
-(spatial, temperature, pressure, motion) and their content.<a href="#section-3-5.1" class="pilcrow">¶</a>
+(spatial, temperature, pressure, motion) and their content.<a href="#section-3-5.1.1" class="pilcrow">¶</a></p>
 </li>
-        <li id="section-3-5.2">a semantic data ontology schema for describing objects, relations,
-and actions in a standardized way<a href="#section-3-5.2" class="pilcrow">¶</a>
+        <li id="section-3-5.2">
+          <p id="section-3-5.2.1">a semantic data ontology schema for describing objects, relations,
+and actions in a standardized way<a href="#section-3-5.2.1" class="pilcrow">¶</a></p>
 </li>
-        <li id="section-3-5.3">a verifiable credentialing and certification method for
+        <li id="section-3-5.3">
+          <p id="section-3-5.3.1">a verifiable credentialing and certification method for
 permissioning create, retrieve, update, and delete (CRUD) access to
-devices, locations, users, and data; and<a href="#section-3-5.3" class="pilcrow">¶</a>
+devices, locations, users, and data; and<a href="#section-3-5.3.1" class="pilcrow">¶</a></p>
 </li>
-        <li id="section-3-5.4">a human and machine-readable contracting language that enables the
+        <li id="section-3-5.4">
+          <p id="section-3-5.4.1">a human and machine-readable contracting language that enables the
 expression and automated execution of legal, financial and physical
-activities.<a href="#section-3-5.4" class="pilcrow">¶</a>
+activities.<a href="#section-3-5.4.1" class="pilcrow">¶</a></p>
 </li>
       </ol>
 <p id="section-3-6">We cannot review the technical specification, but the feature
@@ -1448,13 +1461,17 @@ today’s initial prototypes.<a href="#section-4-6" class="pilcrow">¶</a></p>
 support that could be leveraged, and research opportunities for the
 ICN community for four topics:<a href="#section-4-7" class="pilcrow">¶</a></p>
 <ol start="1" type="1" class="normal type-1" id="section-4-8">
-<li id="section-4-8.1">Scalable multimedia communication;<a href="#section-4-8.1" class="pilcrow">¶</a>
+<li id="section-4-8.1">
+          <p id="section-4-8.1.1">Scalable multimedia communication;<a href="#section-4-8.1.1" class="pilcrow">¶</a></p>
 </li>
-        <li id="section-4-8.2">Interaction with applications;<a href="#section-4-8.2" class="pilcrow">¶</a>
+        <li id="section-4-8.2">
+          <p id="section-4-8.2.1">Interaction with applications;<a href="#section-4-8.2.1" class="pilcrow">¶</a></p>
 </li>
-        <li id="section-4-8.3">In-network computing; and<a href="#section-4-8.3" class="pilcrow">¶</a>
+        <li id="section-4-8.3">
+          <p id="section-4-8.3.1">In-network computing; and<a href="#section-4-8.3.1" class="pilcrow">¶</a></p>
 </li>
-        <li id="section-4-8.4">Interoperability with existing infrastructure.<a href="#section-4-8.4" class="pilcrow">¶</a>
+        <li id="section-4-8.4">
+          <p id="section-4-8.4.1">Interoperability with existing infrastructure.<a href="#section-4-8.4.1" class="pilcrow">¶</a></p>
 </li>
       </ol>
 <div id="scalable-multimedia-communication">
@@ -1468,22 +1485,28 @@ ICN community for four topics:<a href="#section-4-7" class="pilcrow">¶</a></p>
 <a href="#section-4.1.1" class="section-number selfRef">4.1.1. </a><a href="#name-issues-today" class="section-name selfRef">Issues today</a>
           </h4>
 <ul class="normal">
-<li class="normal" id="section-4.1.1-1.1">Low-latency live streaming is not easy and not efficient in the Internet today. CDN-based DASH incurs high latencies.<a href="#section-4.1.1-1.1" class="pilcrow">¶</a>
+<li class="normal" id="section-4.1.1-1.1">
+              <p id="section-4.1.1-1.1.1">Low-latency live streaming is not easy and not efficient in the Internet today. CDN-based DASH incurs high latencies.<a href="#section-4.1.1-1.1.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-4.1.1-1.2">Current trends: blending of real-time interactive (WebRTC with RTP)
-and streaming (DASH), for example: Amazon Twitch, Meta Rush, IETF Media-over-QUIC, QuicR<a href="#section-4.1.1-1.2" class="pilcrow">¶</a>
+            <li class="normal" id="section-4.1.1-1.2">
+              <p id="section-4.1.1-1.2.1">Current trends: blending of real-time interactive (WebRTC with RTP)
+and streaming (DASH), for example: Amazon Twitch, Meta Rush, IETF Media-over-QUIC, QuicR<a href="#section-4.1.1-1.2.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-4.1.1-1.3">
               <p id="section-4.1.1-1.3.1">What is needed:<a href="#section-4.1.1-1.3.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-4.1.1-1.3.2.1">fine-granular media distribution that supports both interactive and streaming;<a href="#section-4.1.1-1.3.2.1" class="pilcrow">¶</a>
+<li class="normal" id="section-4.1.1-1.3.2.1">
+                  <p id="section-4.1.1-1.3.2.1.1">fine-granular media distribution that supports both interactive and streaming;<a href="#section-4.1.1-1.3.2.1.1" class="pilcrow">¶</a></p>
 </li>
-                <li class="normal" id="section-4.1.1-1.3.2.2">scalable multi-destination distribution, i.e., some kind of in-network replication;<a href="#section-4.1.1-1.3.2.2" class="pilcrow">¶</a>
+                <li class="normal" id="section-4.1.1-1.3.2.2">
+                  <p id="section-4.1.1-1.3.2.2.1">scalable multi-destination distribution, i.e., some kind of in-network replication;<a href="#section-4.1.1-1.3.2.2.1" class="pilcrow">¶</a></p>
 </li>
-                <li class="normal" id="section-4.1.1-1.3.2.3">ability to leverage wireless broadcast such as 5G Broadcast; and<a href="#section-4.1.1-1.3.2.3" class="pilcrow">¶</a>
+                <li class="normal" id="section-4.1.1-1.3.2.3">
+                  <p id="section-4.1.1-1.3.2.3.1">ability to leverage wireless broadcast such as 5G Broadcast; and<a href="#section-4.1.1-1.3.2.3.1" class="pilcrow">¶</a></p>
 </li>
-                <li class="normal" id="section-4.1.1-1.3.2.4">support for hetergeneous devices and edge networks, i.e.,
-different quality layers, possibly dynamic transcoding.<a href="#section-4.1.1-1.3.2.4" class="pilcrow">¶</a>
+                <li class="normal" id="section-4.1.1-1.3.2.4">
+                  <p id="section-4.1.1-1.3.2.4.1">support for hetergeneous devices and edge networks, i.e.,
+different quality layers, possibly dynamic transcoding.<a href="#section-4.1.1-1.3.2.4.1" class="pilcrow">¶</a></p>
 </li>
               </ul>
 </li>
@@ -1520,38 +1543,46 @@ different quality layers, possibly dynamic transcoding.<a href="#section-4.1.1-1
               <p id="section-4.1.3-1.1.1">Based on ICN's basic capabilities, actual systems would need specific
 approaches for quality adaptation, e.g.,<a href="#section-4.1.3-1.1.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-4.1.3-1.1.2.1">use of layered coding; and<a href="#section-4.1.3-1.1.2.1" class="pilcrow">¶</a>
+<li class="normal" id="section-4.1.3-1.1.2.1">
+                  <p id="section-4.1.3-1.1.2.1.1">use of layered coding; and<a href="#section-4.1.3-1.1.2.1.1" class="pilcrow">¶</a></p>
 </li>
-                <li class="normal" id="section-4.1.3-1.1.2.2">role of in-network transcoding.<a href="#section-4.1.3-1.1.2.2" class="pilcrow">¶</a>
+                <li class="normal" id="section-4.1.3-1.1.2.2">
+                  <p id="section-4.1.3-1.1.2.2.1">role of in-network transcoding.<a href="#section-4.1.3-1.1.2.2.1" class="pilcrow">¶</a></p>
 </li>
               </ul>
 </li>
             <li class="normal" id="section-4.1.3-1.2">
               <p id="section-4.1.3-1.2.1">In order to achieve low-latency and QoS, more work is needed for<a href="#section-4.1.3-1.2.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-4.1.3-1.2.2.1">fine-tuning with respect to interest aggregation, caching; and for<a href="#section-4.1.3-1.2.2.1" class="pilcrow">¶</a>
+<li class="normal" id="section-4.1.3-1.2.2.1">
+                  <p id="section-4.1.3-1.2.2.1.1">fine-tuning with respect to interest aggregation, caching; and for<a href="#section-4.1.3-1.2.2.1.1" class="pilcrow">¶</a></p>
 </li>
-                <li class="normal" id="section-4.1.3-1.2.2.2">prioritizing "flows", e.g., audio over video.<a href="#section-4.1.3-1.2.2.2" class="pilcrow">¶</a>
+                <li class="normal" id="section-4.1.3-1.2.2.2">
+                  <p id="section-4.1.3-1.2.2.2.1">prioritizing "flows", e.g., audio over video.<a href="#section-4.1.3-1.2.2.2.1" class="pilcrow">¶</a></p>
 </li>
               </ul>
 </li>
-            <li class="normal" id="section-4.1.3-1.3">Sender mobility has seen some proposals in research that need to be validated.<a href="#section-4.1.3-1.3" class="pilcrow">¶</a>
+            <li class="normal" id="section-4.1.3-1.3">
+              <p id="section-4.1.3-1.3.1">Sender mobility has seen some proposals in research that need to be validated.<a href="#section-4.1.3-1.3.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-4.1.3-1.4">More experiments are needed with large-scale interactive multimedia communication
-and low-latency transport.<a href="#section-4.1.3-1.4" class="pilcrow">¶</a>
+            <li class="normal" id="section-4.1.3-1.4">
+              <p id="section-4.1.3-1.4.1">More experiments are needed with large-scale interactive multimedia communication
+and low-latency transport.<a href="#section-4.1.3-1.4.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-4.1.3-1.5">
               <p id="section-4.1.3-1.5.1">Actual application development and deployment is needed to gradually
 develop best practices, software stacks, and re-usable application
 components.<a href="#section-4.1.3-1.5.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-4.1.3-1.5.2.1">For initial deployments, some kind of overlay topology over the
-current Internet might be needed.<a href="#section-4.1.3-1.5.2.1" class="pilcrow">¶</a>
+<li class="normal" id="section-4.1.3-1.5.2.1">
+                  <p id="section-4.1.3-1.5.2.1.1">For initial deployments, some kind of overlay topology over the
+current Internet might be needed.<a href="#section-4.1.3-1.5.2.1.1" class="pilcrow">¶</a></p>
 </li>
-                <li class="normal" id="section-4.1.3-1.5.2.2">Whereas the technology (different faces and underlay protocols) is
+                <li class="normal" id="section-4.1.3-1.5.2.2">
+                  <p id="section-4.1.3-1.5.2.2.1">Whereas the technology (different faces and underlay protocols) is
 essentially ready, there are other issues the deployment and
 efficient operation of such overlays (shortest path communication,
-routing, reliability).<a href="#section-4.1.3-1.5.2.2" class="pilcrow">¶</a>
+routing, reliability).<a href="#section-4.1.3-1.5.2.2.1" class="pilcrow">¶</a></p>
 </li>
               </ul>
 </li>
@@ -1592,14 +1623,18 @@ systems may not be able to take advantage of it.<a href="#section-4.2.1-3" class
 and objects so that location, storage contexts (files etc.) become
 less relevant. In addition ICN provides<a href="#section-4.2.2-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-4.2.2-2.1">named-based APIs to applications;<a href="#section-4.2.2-2.1" class="pilcrow">¶</a>
+<li class="normal" id="section-4.2.2-2.1">
+              <p id="section-4.2.2-2.1.1">named-based APIs to applications;<a href="#section-4.2.2-2.1.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-4.2.2-2.2">support for object collections through manifests;<a href="#section-4.2.2-2.2" class="pilcrow">¶</a>
+            <li class="normal" id="section-4.2.2-2.2">
+              <p id="section-4.2.2-2.2.1">support for object collections through manifests;<a href="#section-4.2.2-2.2.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-4.2.2-2.3">additional "middleware" such as dataset synchronization; and<a href="#section-4.2.2-2.3" class="pilcrow">¶</a>
+            <li class="normal" id="section-4.2.2-2.3">
+              <p id="section-4.2.2-2.3.1">additional "middleware" such as dataset synchronization; and<a href="#section-4.2.2-2.3.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-4.2.2-2.4">data-sharing is generally supported, which has benefits beyond
-networking, e.g., zero-copy sharing in processes etc.<a href="#section-4.2.2-2.4" class="pilcrow">¶</a>
+            <li class="normal" id="section-4.2.2-2.4">
+              <p id="section-4.2.2-2.4.1">data-sharing is generally supported, which has benefits beyond
+networking, e.g., zero-copy sharing in processes etc.<a href="#section-4.2.2-2.4.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </section>
@@ -1610,32 +1645,39 @@ networking, e.g., zero-copy sharing in processes etc.<a href="#section-4.2.2-2.4
 <a href="#section-4.2.3" class="section-number selfRef">4.2.3. </a><a href="#name-research-opportunities-2" class="section-name selfRef">Research Opportunities</a>
           </h4>
 <ul class="normal">
-<li class="normal" id="section-4.2.3-1.1">Work should be started on the development of information-centric
+<li class="normal" id="section-4.2.3-1.1">
+              <p id="section-4.2.3-1.1.1">Work should be started on the development of information-centric
 hypermedia concepts, i.e., linking from object collections to other
-objects/collections.<a href="#section-4.2.3-1.1" class="pilcrow">¶</a>
+objects/collections.<a href="#section-4.2.3-1.1.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-4.2.3-1.2">Manifest technologies such as FLIC should be extended to support
-dynamically created objects.<a href="#section-4.2.3-1.2" class="pilcrow">¶</a>
+            <li class="normal" id="section-4.2.3-1.2">
+              <p id="section-4.2.3-1.2.1">Manifest technologies such as FLIC should be extended to support
+dynamically created objects.<a href="#section-4.2.3-1.2.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-4.2.3-1.3">Concepts for dealing with "mutable objects" (or mutable
+            <li class="normal" id="section-4.2.3-1.3">
+              <p id="section-4.2.3-1.3.1">Concepts for dealing with "mutable objects" (or mutable
 "information") should be developed, i.e., how to deal with updates
-without giving up data immutability.<a href="#section-4.2.3-1.3" class="pilcrow">¶</a>
+without giving up data immutability.<a href="#section-4.2.3-1.3.1" class="pilcrow">¶</a></p>
 </li>
             <li class="normal" id="section-4.2.3-1.4">
               <p id="section-4.2.3-1.4.1">The relationship between application-layer data-oriented operation
 and network-layer needs to be explored further, e.g.,<a href="#section-4.2.3-1.4.1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-4.2.3-1.4.2.1">Would there be any differences?<a href="#section-4.2.3-1.4.2.1" class="pilcrow">¶</a>
+<li class="normal" id="section-4.2.3-1.4.2.1">
+                  <p id="section-4.2.3-1.4.2.1.1">Would there be any differences?<a href="#section-4.2.3-1.4.2.1.1" class="pilcrow">¶</a></p>
 </li>
-                <li class="normal" id="section-4.2.3-1.4.2.2">Would it be needed to think about robust namespace mappings schemes?<a href="#section-4.2.3-1.4.2.2" class="pilcrow">¶</a>
+                <li class="normal" id="section-4.2.3-1.4.2.2">
+                  <p id="section-4.2.3-1.4.2.2.1">Would it be needed to think about robust namespace mappings schemes?<a href="#section-4.2.3-1.4.2.2.1" class="pilcrow">¶</a></p>
 </li>
               </ul>
 </li>
-            <li class="normal" id="section-4.2.3-1.5">Concepts and mechanisms for privacy, selective attention, content
+            <li class="normal" id="section-4.2.3-1.5">
+              <p id="section-4.2.3-1.5.1">Concepts and mechanisms for privacy, selective attention, content
 filtering, and autonomous interactions, as well as ownership and
-control on the publishing side are needed.<a href="#section-4.2.3-1.5" class="pilcrow">¶</a>
+control on the publishing side are needed.<a href="#section-4.2.3-1.5.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-4.2.3-1.6">In general more applications should be developed to enable more experiments.<a href="#section-4.2.3-1.6" class="pilcrow">¶</a>
+            <li class="normal" id="section-4.2.3-1.6">
+              <p id="section-4.2.3-1.6.1">In general more applications should be developed to enable more experiments.<a href="#section-4.2.3-1.6.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </section>
@@ -1649,17 +1691,23 @@ control on the publishing side are needed.<a href="#section-4.2.3-1.5" class="pi
         </h3>
 <p id="section-4.3-1">In-network computing can support Metaverse systems in different ways:<a href="#section-4.3-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-4.3-2.1">transcoding (to support heterogeneous receiver groups and networks better);<a href="#section-4.3-2.1" class="pilcrow">¶</a>
+<li class="normal" id="section-4.3-2.1">
+            <p id="section-4.3-2.1.1">transcoding (to support heterogeneous receiver groups and networks better);<a href="#section-4.3-2.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-4.3-2.2">coding for better communication robustness &amp; efficiency;<a href="#section-4.3-2.2" class="pilcrow">¶</a>
+          <li class="normal" id="section-4.3-2.2">
+            <p id="section-4.3-2.2.1">coding for better communication robustness &amp; efficiency;<a href="#section-4.3-2.2.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-4.3-2.3">rendering for offloading clients and servers;<a href="#section-4.3-2.3" class="pilcrow">¶</a>
+          <li class="normal" id="section-4.3-2.3">
+            <p id="section-4.3-2.3.1">rendering for offloading clients and servers;<a href="#section-4.3-2.3.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-4.3-2.4">compression and decompression on various levels, including semantic communication;<a href="#section-4.3-2.4" class="pilcrow">¶</a>
+          <li class="normal" id="section-4.3-2.4">
+            <p id="section-4.3-2.4.1">compression and decompression on various levels, including semantic communication;<a href="#section-4.3-2.4.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-4.3-2.5">ad insertion; and<a href="#section-4.3-2.5" class="pilcrow">¶</a>
+          <li class="normal" id="section-4.3-2.5">
+            <p id="section-4.3-2.5.1">ad insertion; and<a href="#section-4.3-2.5.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-4.3-2.6">potentially for future decomposed Metaverse systems.<a href="#section-4.3-2.6" class="pilcrow">¶</a>
+          <li class="normal" id="section-4.3-2.6">
+            <p id="section-4.3-2.6.1">potentially for future decomposed Metaverse systems.<a href="#section-4.3-2.6.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 <div id="issues-today-2">
@@ -1668,15 +1716,18 @@ control on the publishing side are needed.<a href="#section-4.2.3-1.5" class="pi
 <a href="#section-4.3.1" class="section-number selfRef">4.3.1. </a><a href="#name-issues-today-3" class="section-name selfRef">Issues today</a>
           </h4>
 <ul class="normal">
-<li class="normal" id="section-4.3.1-1.1">In-network computing today is typically limited to coarse-grained
-CDN-style computing, include Multi-Access Edge Computing.<a href="#section-4.3.1-1.1" class="pilcrow">¶</a>
+<li class="normal" id="section-4.3.1-1.1">
+              <p id="section-4.3.1-1.1.1">In-network computing today is typically limited to coarse-grained
+CDN-style computing, include Multi-Access Edge Computing.<a href="#section-4.3.1-1.1.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-4.3.1-1.2">Current trust and security frameworks require TLS connection
+            <li class="normal" id="section-4.3.1-1.2">
+              <p id="section-4.3.1-1.2.1">Current trust and security frameworks require TLS connection
 termination, i.e., represent an overlay approach, which is not
-conducive to low latency communication.<a href="#section-4.3.1-1.2" class="pilcrow">¶</a>
+conducive to low latency communication.<a href="#section-4.3.1-1.2.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-4.3.1-1.3">Dynamic, just-in-time, instantiation of computing function on
-application-agnostic platforms is not available.<a href="#section-4.3.1-1.3" class="pilcrow">¶</a>
+            <li class="normal" id="section-4.3.1-1.3">
+              <p id="section-4.3.1-1.3.1">Dynamic, just-in-time, instantiation of computing function on
+application-agnostic platforms is not available.<a href="#section-4.3.1-1.3.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </section>
@@ -1687,13 +1738,16 @@ application-agnostic platforms is not available.<a href="#section-4.3.1-1.3" cla
 <a href="#section-4.3.2" class="section-number selfRef">4.3.2. </a><a href="#name-icn-support-3" class="section-name selfRef">ICN Support</a>
           </h4>
 <ul class="normal">
-<li class="normal" id="section-4.3.2-1.1">The named-data approach is generally useful for distributed computing (NFN,
-RICE, CFN).<a href="#section-4.3.2-1.1" class="pilcrow">¶</a>
+<li class="normal" id="section-4.3.2-1.1">
+              <p id="section-4.3.2-1.1.1">The named-data approach is generally useful for distributed computing (NFN,
+RICE, CFN).<a href="#section-4.3.2-1.1.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-4.3.2-1.2">ICN's security model makes it possible to do on-path computing / data transformation securely<a href="#section-4.3.2-1.2" class="pilcrow">¶</a>
+            <li class="normal" id="section-4.3.2-1.2">
+              <p id="section-4.3.2-1.2.1">ICN's security model makes it possible to do on-path computing / data transformation securely<a href="#section-4.3.2-1.2.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-4.3.2-1.3">discovery of functions and request forwarding can be punted on
-regular ICN mechanisms (name-based forwarding).<a href="#section-4.3.2-1.3" class="pilcrow">¶</a>
+            <li class="normal" id="section-4.3.2-1.3">
+              <p id="section-4.3.2-1.3.1">discovery of functions and request forwarding can be punted on
+regular ICN mechanisms (name-based forwarding).<a href="#section-4.3.2-1.3.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </section>
@@ -1704,12 +1758,15 @@ regular ICN mechanisms (name-based forwarding).<a href="#section-4.3.2-1.3" clas
 <a href="#section-4.3.3" class="section-number selfRef">4.3.3. </a><a href="#name-research-opportunities-3" class="section-name selfRef">Research Opportunities</a>
           </h4>
 <ul class="normal">
-<li class="normal" id="section-4.3.3-1.1">Robust distributed computing interaction models (RMI, Dataflow,
-REST) should be further developed and tested.<a href="#section-4.3.3-1.1" class="pilcrow">¶</a>
+<li class="normal" id="section-4.3.3-1.1">
+              <p id="section-4.3.3-1.1.1">Robust distributed computing interaction models (RMI, Dataflow,
+REST) should be further developed and tested.<a href="#section-4.3.3-1.1.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-4.3.3-1.2">Specific approaches such as in-network media transcoding should be developed.<a href="#section-4.3.3-1.2" class="pilcrow">¶</a>
+            <li class="normal" id="section-4.3.3-1.2">
+              <p id="section-4.3.3-1.2.1">Specific approaches such as in-network media transcoding should be developed.<a href="#section-4.3.3-1.2.1" class="pilcrow">¶</a></p>
 </li>
-            <li class="normal" id="section-4.3.3-1.3">In general, more experiments for different types of applications are needed.<a href="#section-4.3.3-1.3" class="pilcrow">¶</a>
+            <li class="normal" id="section-4.3.3-1.3">
+              <p id="section-4.3.3-1.3.1">In general, more experiments for different types of applications are needed.<a href="#section-4.3.3-1.3.1" class="pilcrow">¶</a></p>
 </li>
           </ul>
 </section>
@@ -1764,6 +1821,7 @@ systemic approach would be highly desirable in the longer term.<a href="#section
 <p id="section-8-1">TBD<a href="#section-8-1" class="pilcrow">¶</a></p>
 </section>
 </div>
+<div id="sec-informative-references">
 <section id="section-9">
       <h2 id="name-informative-references">
 <a href="#section-9" class="section-number selfRef">9. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
@@ -1775,11 +1833,11 @@ systemic approach would be highly desirable in the longer term.<a href="#section
 <dd class="break"></dd>
 <dt id="I-D.ietf-moq-requirements">[I-D.ietf-moq-requirements]</dt>
       <dd>
-<span class="refAuthor">Gruessing, J.</span> and <span class="refAuthor">S. Dawkins</span>, <span class="refTitle">"Media Over QUIC - Use Cases and Requirements for Media Transport Protocol Design"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-moq-requirements-01</span>, <time datetime="2023-07-10" class="refDate">10 July 2023</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-moq-requirements-01">https://datatracker.ietf.org/doc/html/draft-ietf-moq-requirements-01</a>&gt;</span>. </dd>
+<span class="refAuthor">Gruessing, J.</span> and <span class="refAuthor">S. Dawkins</span>, <span class="refTitle">"Media Over QUIC - Use Cases and Requirements for Media Transport Protocol Design"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-moq-requirements-02</span>, <time datetime="2023-09-29" class="refDate">29 September 2023</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-moq-requirements-02">https://datatracker.ietf.org/doc/html/draft-ietf-moq-requirements-02</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.ietf-quic-multipath">[I-D.ietf-quic-multipath]</dt>
       <dd>
-<span class="refAuthor">Liu, Y.</span>, <span class="refAuthor">Ma, Y.</span>, <span class="refAuthor">De Coninck, Q.</span>, <span class="refAuthor">Bonaventure, O.</span>, <span class="refAuthor">Huitema, C.</span>, and <span class="refAuthor">M. Kühlewind</span>, <span class="refTitle">"Multipath Extension for QUIC"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-quic-multipath-05</span>, <time datetime="2023-07-10" class="refDate">10 July 2023</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-quic-multipath-05">https://datatracker.ietf.org/doc/html/draft-ietf-quic-multipath-05</a>&gt;</span>. </dd>
+<span class="refAuthor">Liu, Y.</span>, <span class="refAuthor">Ma, Y.</span>, <span class="refAuthor">De Coninck, Q.</span>, <span class="refAuthor">Bonaventure, O.</span>, <span class="refAuthor">Huitema, C.</span>, and <span class="refAuthor">M. Kühlewind</span>, <span class="refTitle">"Multipath Extension for QUIC"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-quic-multipath-12</span>, <time datetime="2025-01-22" class="refDate">22 January 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-quic-multipath-12">https://datatracker.ietf.org/doc/html/draft-ietf-quic-multipath-12</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="I-D.jennings-moq-proto">[I-D.jennings-moq-proto]</dt>
       <dd>
@@ -1815,10 +1873,11 @@ systemic approach would be highly desirable in the longer term.<a href="#section
 <dd class="break"></dd>
 <dt id="socialVR-measurements">[socialVR-measurements]</dt>
     <dd>
-<span class="refAuthor">Cheng, R.</span>, <span class="refAuthor">Wu, N.</span>, <span class="refAuthor">Varvello, M.</span>, <span class="refAuthor">Chen, S.</span>, and <span class="refAuthor">B. Han</span>, <span class="refTitle">"Are we ready for metaverse?: a measurement study of social virtual reality platforms"</span>, <span class="seriesInfo">Proceedings of the 22nd ACM Internet Measurement Conference</span>, <span class="seriesInfo">DOI 10.1145/3517745.3561417</span>, <time datetime="2022-10" class="refDate">October 2022</time>, <span>&lt;<a href="https://doi.org/10.1145/3517745.3561417">https://doi.org/10.1145/3517745.3561417</a>&gt;</span>. </dd>
+<span class="refAuthor">Cheng, R.</span>, <span class="refAuthor">Wu, N.</span>, <span class="refAuthor">Varvello, M.</span>, <span class="refAuthor">Chen, S.</span>, and <span class="refAuthor">B. Han</span>, <span class="refTitle">"Are we ready for metaverse?: a measurement study of social virtual reality platforms"</span>, <span class="refContent">ACM</span>, <span class="seriesInfo">Proceedings of the 22nd ACM Internet Measurement Conference pp. 504-518</span>, <span class="seriesInfo">DOI 10.1145/3517745.3561417</span>, <time datetime="2022-10" class="refDate">October 2022</time>, <span>&lt;<a href="https://doi.org/10.1145/3517745.3561417">https://doi.org/10.1145/3517745.3561417</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>
+</div>
 <div id="authors-addresses">
 <section id="appendix-A">
       <h2 id="name-authors-addresses">

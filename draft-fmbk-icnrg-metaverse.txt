@@ -5,12 +5,12 @@
 Network Working Group                                        G. Fioccola
 Internet-Draft                                       Huawei Technologies
 Intended status: Informational                                 P. Mendes
-Expires: 11 January 2024                                          Airbus
+Expires: 28 August 2025                                           Airbus
                                                                 J. Burke
                                                               UCLA REMAP
                                                              D. Kutscher
                                                                HKUST(GZ)
-                                                            10 July 2023
+                                                        24 February 2025
 
 
                      Information-Centric Metaverse
@@ -44,11 +44,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 11 January 2024.
+   This Internet-Draft will expire on 28 August 2025.
 
 Copyright Notice
 
-   Copyright (c) 2023 IETF Trust and the persons identified as the
+   Copyright (c) 2025 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -528,16 +528,16 @@ Table of Contents
               Gruessing, J. and S. Dawkins, "Media Over QUIC - Use Cases
               and Requirements for Media Transport Protocol Design",
               Work in Progress, Internet-Draft, draft-ietf-moq-
-              requirements-01, 10 July 2023,
+              requirements-02, 29 September 2023,
               <https://datatracker.ietf.org/doc/html/draft-ietf-moq-
-              requirements-01>.
+              requirements-02>.
 
    [I-D.ietf-quic-multipath]
               Liu, Y., Ma, Y., De Coninck, Q., Bonaventure, O., Huitema,
               C., and M. Kühlewind, "Multipath Extension for QUIC", Work
-              in Progress, Internet-Draft, draft-ietf-quic-multipath-05,
-              10 July 2023, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-quic-multipath-05>.
+              in Progress, Internet-Draft, draft-ietf-quic-multipath-12,
+              22 January 2025, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-quic-multipath-12>.
 
    [I-D.jennings-moq-proto]
               Jennings, C. F. and S. Nandakumar, "QuicR - Media Delivery
@@ -590,8 +590,8 @@ Table of Contents
    [socialVR-measurements]
               Cheng, R., Wu, N., Varvello, M., Chen, S., and B. Han,
               "Are we ready for metaverse?: a measurement study of
-              social virtual reality platforms", Proceedings of the 22nd
-              ACM Internet Measurement Conference,
+              social virtual reality platforms", ACM, Proceedings of the
+              22nd ACM Internet Measurement Conference pp. 504-518,
               DOI 10.1145/3517745.3561417, October 2022,
               <https://doi.org/10.1145/3517745.3561417>.
 
